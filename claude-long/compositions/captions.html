@@ -1,0 +1,18 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; --ground:#F5F3EE;--ink:#15171C;--muted:#5B616E;--line:#E2DED3;--card:#FFFFFF;--accent:#2563EB;--accent-soft:#DCE7FF;--stage:#0F1218; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden; }
+    #root * { box-sizing: border-box; margin: 0; padding: 0; }
+    .cg { position: absolute; left: 0; width: 1440px; bottom: 60px; text-align: center; line-height: 0; font-size: 0; opacity: 0; visibility: hidden; overflow: visible; }
+    .cb { display: inline-block; vertical-align: bottom; background: var(--card); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 12px 40px rgba(21,23,28,.10); padding: 14px 26px; white-space: nowrap; font-size: 52px; font-weight: 700; line-height: 1.2; }
+    .cw { display: inline-block; padding: 2px 10px; margin: 0 -3px; border-radius: 14px; color: var(--muted); background-color: rgba(37,99,235,0); }
+  </style>
+  <div id="root" data-composition-id="captions" data-width="1440" data-height="1080">
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["captions"] = tl;
+  </script>
+</template>

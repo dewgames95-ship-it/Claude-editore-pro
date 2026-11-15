@@ -1,0 +1,51 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; --ground:#F5F3EE;--ink:#15171C;--muted:#5B616E;--line:#E2DED3;--card:#FFFFFF;--accent:#2563EB;--accent-soft:#DCE7FF;--stage:#0F1218; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden; }
+    #root * { box-sizing: border-box; margin: 0; padding: 0; }
+    #p5-col { position: absolute; left: 80px; top: 60px; width: 520px; }
+    #p5-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 20px; border-radius: 999px; line-height: 1.2; }
+    #p5-title { margin-top: 26px; font-size: 58px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+    #p5-bullets { margin-top: 36px; }
+    #p5-col .b { display: grid; margin-bottom: 22px; font-size: 34px; line-height: 1.25; }
+    #p5-col .b span { grid-area: 1 / 1; display: block; }
+    #p5-col .cur { font-weight: 700; color: var(--ink); }
+    #p5-col .old { font-weight: 400; color: var(--muted); opacity: 0; }
+    .lt { position: absolute; left: 80px; bottom: 200px; width: 520px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 12px 40px rgba(21,23,28,.10); padding: 20px 24px 20px 34px; overflow: hidden; }
+    .lt .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--accent); }
+    .lt-t { font-size: 32px; font-weight: 700; line-height: 1.2; }
+    .lt-s { margin-top: 6px; font-size: 26px; font-weight: 400; color: var(--muted); line-height: 1.25; }
+  </style>
+  <div id="root" data-composition-id="step5-panel" data-width="1440" data-height="1080">
+    <div id="p5-col">
+      <div id="p5-badge">Step 5 / 5</div>
+      <h2 id="p5-title">Send the QR to the bot</h2>
+      <div id="p5-bullets">
+        <div id="p5-b0" class="b"><span id="p5-b0-cur" class="cur">Save, then screenshot the API QR code</span><span id="p5-b0-old" class="old">Save, then screenshot the API QR code</span></div>
+        <div id="p5-b1" class="b"><span id="p5-b1-cur" class="cur">Send the screenshot in the bot chat</span><span id="p5-b1-old" class="old">Send the screenshot in the bot chat</span></div>
+        <div id="p5-b2" class="b"><span id="p5-b2-cur" class="cur">If it fails, crop tight around the QR and resend</span><span id="p5-b2-old" class="old">If it fails, crop tight around the QR and resend</span></div>
+        <div id="p5-b3" class="b"><span id="p5-b3-cur" class="cur">Binance connected, Futures balance shown</span><span id="p5-b3-old" class="old">Binance connected, Futures balance shown</span></div>
+      </div>
+    </div>
+    <div id="p5-lt0" class="lt"><div class="bar"></div><div class="lt-t">Second try</div><div class="lt-s">Take a new screenshot and crop it to the QR</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#p5-badge", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+    tl.fromTo("#p5-title", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.25);
+    tl.fromTo("#p5-b0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.9);
+    tl.fromTo("#p5-b0-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 6.3);
+    tl.fromTo("#p5-b0-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 6.3);
+    tl.fromTo("#p5-b1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 6.3);
+    tl.fromTo("#p5-b1-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 8.5);
+    tl.fromTo("#p5-b1-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 8.5);
+    tl.fromTo("#p5-b2", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 8.5);
+    tl.fromTo("#p5-b2-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 29.9);
+    tl.fromTo("#p5-b2-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 29.9);
+    tl.fromTo("#p5-b3", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 29.9);
+    tl.fromTo("#p5-lt0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 12.7);
+    tl.fromTo("#p5-lt0", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 19);
+    tl.fromTo("#p5-col", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 35.4);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["step5-panel"] = tl;
+  </script>
+</template>

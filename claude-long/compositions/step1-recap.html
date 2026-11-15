@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; --ground:#F5F3EE;--ink:#15171C;--muted:#5B616E;--line:#E2DED3;--card:#FFFFFF;--accent:#2563EB;--accent-soft:#DCE7FF;--stage:#0F1218; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden; }
+    #root * { box-sizing: border-box; margin: 0; padding: 0; }
+    #root { background: var(--ground); }
+    #r1-wrap { position: absolute; inset: 0; }
+    #r1-head { position: absolute; left: 80px; top: 80px; width: 1280px; }
+    #r1-kick { font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+    #r1-h1 { margin-top: 8px; font-size: 72px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.05; }
+    #r1-blocks { position: absolute; left: 80px; top: 250px; width: 1280px; }
+    .blk { border-top: 2px solid var(--line); padding-top: 16px; margin-bottom: 28px; }
+    .lab { font-size: 24px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); }
+    .body { margin-top: 8px; font-size: 40px; font-weight: 700; line-height: 1.22; }
+  </style>
+  <div id="root" data-composition-id="step1-recap" data-width="1440" data-height="1080">
+    <div id="r1-wrap">
+      <div id="r1-head"><div id="r1-kick">Step 1 / 5</div><h1 id="r1-h1">Step 1 recap</h1></div>
+      <div id="r1-blocks">
+        <div id="r1-b0" class="blk"><div class="lab">WHAT JUST HAPPENED</div><div class="body">undefined</div></div>
+        <div id="r1-b1" class="blk"><div class="lab">WHAT’S NEXT</div><div class="body">undefined</div></div>
+        <div id="r1-b2" class="blk"><div class="lab">QUICK TIP</div><div class="body">undefined</div></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#r1-head", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0);
+    tl.fromTo("#r1-b0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.4);
+    tl.fromTo("#r1-b1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 3.3);
+    tl.fromTo("#r1-b2", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 6.2);
+    tl.fromTo("#r1-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 9.7);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["step1-recap"] = tl;
+  </script>
+</template>

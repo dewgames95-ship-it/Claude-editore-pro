@@ -1,0 +1,51 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; --ground:#F5F3EE;--ink:#15171C;--muted:#5B616E;--line:#E2DED3;--card:#FFFFFF;--accent:#2563EB;--accent-soft:#DCE7FF;--stage:#0F1218; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden; }
+    #root * { box-sizing: border-box; margin: 0; padding: 0; }
+    #p3-col { position: absolute; left: 80px; top: 60px; width: 520px; }
+    #p3-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 20px; border-radius: 999px; line-height: 1.2; }
+    #p3-title { margin-top: 26px; font-size: 58px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+    #p3-bullets { margin-top: 36px; }
+    #p3-col .b { display: grid; margin-bottom: 22px; font-size: 34px; line-height: 1.25; }
+    #p3-col .b span { grid-area: 1 / 1; display: block; }
+    #p3-col .cur { font-weight: 700; color: var(--ink); }
+    #p3-col .old { font-weight: 400; color: var(--muted); opacity: 0; }
+    .lt { position: absolute; left: 80px; bottom: 200px; width: 520px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 12px 40px rgba(21,23,28,.10); padding: 20px 24px 20px 34px; overflow: hidden; }
+    .lt .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--accent); }
+    .lt-t { font-size: 32px; font-weight: 700; line-height: 1.2; }
+    .lt-s { margin-top: 6px; font-size: 26px; font-weight: 400; color: var(--muted); line-height: 1.25; }
+  </style>
+  <div id="root" data-composition-id="step3-panel" data-width="1440" data-height="1080">
+    <div id="p3-col">
+      <div id="p3-badge">Step 3 / 5</div>
+      <h2 id="p3-title">Create the API key</h2>
+      <div id="p3-bullets">
+        <div id="p3-b0" class="b"><span id="p3-b0-cur" class="cur">Open Binance and search “API”</span><span id="p3-b0-old" class="old">Open Binance and search “API”</span></div>
+        <div id="p3-b1" class="b"><span id="p3-b1-cur" class="cur">Tap Create API, keep “System generated”</span><span id="p3-b1-old" class="old">Tap Create API, keep “System generated”</span></div>
+        <div id="p3-b2" class="b"><span id="p3-b2-cur" class="cur">Name it (for example Mybot), tap Next</span><span id="p3-b2-old" class="old">Name it (for example Mybot), tap Next</span></div>
+        <div id="p3-b3" class="b"><span id="p3-b3-cur" class="cur">Confirm 2FA. Your key is created</span><span id="p3-b3-old" class="old">Confirm 2FA. Your key is created</span></div>
+      </div>
+    </div>
+    <div id="p3-lt0" class="lt"><div class="bar"></div><div class="lt-t">Binance app</div><div class="lt-s">Search → Functions → API</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#p3-badge", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+    tl.fromTo("#p3-title", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.25);
+    tl.fromTo("#p3-b0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 3.9);
+    tl.fromTo("#p3-b0-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 10.1);
+    tl.fromTo("#p3-b0-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 10.1);
+    tl.fromTo("#p3-b1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 10.1);
+    tl.fromTo("#p3-b1-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 18.3);
+    tl.fromTo("#p3-b1-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 18.3);
+    tl.fromTo("#p3-b2", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 18.3);
+    tl.fromTo("#p3-b2-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 24.5);
+    tl.fromTo("#p3-b2-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 24.5);
+    tl.fromTo("#p3-b3", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 24.5);
+    tl.fromTo("#p3-lt0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.7);
+    tl.fromTo("#p3-lt0", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 3.4);
+    tl.fromTo("#p3-col", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 30.2);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["step3-panel"] = tl;
+  </script>
+</template>

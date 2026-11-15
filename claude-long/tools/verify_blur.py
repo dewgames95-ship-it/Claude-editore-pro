@@ -7,7 +7,7 @@ from multiprocessing import Pool
 SRC = sys.argv[1]
 def chk(a):
     i, f = a
-    import blur_qr_lib as L
+    import blur_qr as L
     return i, bool(L.detect_qr(f)), L.detect_fallback(f) if i/30 >= 60 else []
 def it():
     cap = cv2.VideoCapture(os.path.join(SRC, "blurred.mp4")); i = 0

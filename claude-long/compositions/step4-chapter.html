@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; --ground:#F5F3EE;--ink:#15171C;--muted:#5B616E;--line:#E2DED3;--card:#FFFFFF;--accent:#2563EB;--accent-soft:#DCE7FF;--stage:#0F1218; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden; }
+    #root * { box-sizing: border-box; margin: 0; padding: 0; }
+    #root { background: var(--ground); }
+    #c4-wrap { position: absolute; inset: 0; }
+    #c4-body { position: absolute; left: 80px; top: 340px; width: 1280px; }
+    #c4-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 36px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 30px; border-radius: 999px; }
+    #c4-title { margin-top: 34px; font-size: 84px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+    #c4-sub { margin-top: 24px; font-size: 40px; font-weight: 400; color: var(--muted); line-height: 1.25; }
+    #c4-dots { position: absolute; left: 80px; top: 900px; display: flex; gap: 18px; align-items: center; }
+    .dot { width: 18px; height: 18px; border-radius: 50%; background: var(--line); display: block; }
+    .dot.on { background: var(--accent); width: 54px; border-radius: 9px; }
+  </style>
+  <div id="root" data-composition-id="step4-chapter" data-width="1440" data-height="1080">
+    <div id="c4-wrap">
+      <div id="c4-body">
+        <div id="c4-badge">Step 4</div>
+        <h1 id="c4-title">Set permissions and IP</h1>
+        <div id="c4-sub">Edit the key before you take the screenshot</div>
+      </div>
+      <div id="c4-dots"><span id="c4-dot1" class="dot"></span><span id="c4-dot2" class="dot"></span><span id="c4-dot3" class="dot"></span><span id="c4-dot4" class="dot on"></span><span id="c4-dot5" class="dot"></span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#c4-badge", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+    tl.fromTo("#c4-title", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.3);
+    tl.fromTo("#c4-sub", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.6);
+    tl.fromTo("#c4-dots", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.5);
+    tl.fromTo("#c4-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 2.2);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["step4-chapter"] = tl;
+  </script>
+</template>

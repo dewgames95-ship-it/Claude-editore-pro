@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "node tools/build.mjs",
     "dev": "npx --yes hyperframes@0.9.52 preview",
     "check": "npx --yes hyperframes@0.9.52 check",
     "render": "npx --yes hyperframes@0.9.52 render",

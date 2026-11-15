@@ -1,0 +1,35 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; --ground:#F5F3EE;--ink:#15171C;--muted:#5B616E;--line:#E2DED3;--card:#FFFFFF;--accent:#2563EB;--accent-soft:#DCE7FF;--stage:#0F1218; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden; }
+    #root * { box-sizing: border-box; margin: 0; padding: 0; }
+    #root { background: var(--ground); }
+    #c1-wrap { position: absolute; inset: 0; }
+    #c1-body { position: absolute; left: 80px; top: 340px; width: 1280px; }
+    #c1-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 36px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 30px; border-radius: 999px; }
+    #c1-title { margin-top: 34px; font-size: 84px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+    #c1-sub { margin-top: 24px; font-size: 40px; font-weight: 400; color: var(--muted); line-height: 1.25; }
+    #c1-dots { position: absolute; left: 80px; top: 900px; display: flex; gap: 18px; align-items: center; }
+    .dot { width: 18px; height: 18px; border-radius: 50%; background: var(--line); display: block; }
+    .dot.on { background: var(--accent); width: 54px; border-radius: 9px; }
+  </style>
+  <div id="root" data-composition-id="step1-chapter" data-width="1440" data-height="1080">
+    <div id="c1-wrap">
+      <div id="c1-body">
+        <div id="c1-badge">Step 1</div>
+        <h1 id="c1-title">Connect your exchange</h1>
+        <div id="c1-sub">Open the bot and choose Binance</div>
+      </div>
+      <div id="c1-dots"><span id="c1-dot1" class="dot on"></span><span id="c1-dot2" class="dot"></span><span id="c1-dot3" class="dot"></span><span id="c1-dot4" class="dot"></span><span id="c1-dot5" class="dot"></span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#c1-badge", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+    tl.fromTo("#c1-title", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.3);
+    tl.fromTo("#c1-sub", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.6);
+    tl.fromTo("#c1-dots", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.5);
+    tl.fromTo("#c1-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 2.2);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["step1-chapter"] = tl;
+  </script>
+</template>

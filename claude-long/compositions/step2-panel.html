@@ -1,0 +1,50 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; --ground:#F5F3EE;--ink:#15171C;--muted:#5B616E;--line:#E2DED3;--card:#FFFFFF;--accent:#2563EB;--accent-soft:#DCE7FF;--stage:#0F1218; font-family: Inter, sans-serif; color: var(--ink); overflow: hidden; }
+    #root * { box-sizing: border-box; margin: 0; padding: 0; }
+    #p2-col { position: absolute; left: 80px; top: 60px; width: 520px; }
+    #p2-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 20px; border-radius: 999px; line-height: 1.2; }
+    #p2-title { margin-top: 26px; font-size: 58px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+    #p2-bullets { margin-top: 36px; }
+    #p2-col .b { display: grid; margin-bottom: 22px; font-size: 34px; line-height: 1.25; }
+    #p2-col .b span { grid-area: 1 / 1; display: block; }
+    #p2-col .cur { font-weight: 700; color: var(--ink); }
+    #p2-col .old { font-weight: 400; color: var(--muted); opacity: 0; }
+    .lt { position: absolute; left: 80px; bottom: 200px; width: 520px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 12px 40px rgba(21,23,28,.10); padding: 20px 24px 20px 34px; overflow: hidden; }
+    .lt .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--accent); }
+    .lt-t { font-size: 32px; font-weight: 700; line-height: 1.2; }
+    .lt-s { margin-top: 6px; font-size: 26px; font-weight: 400; color: var(--muted); line-height: 1.25; }
+  </style>
+  <div id="root" data-composition-id="step2-panel" data-width="1440" data-height="1080">
+    <div id="p2-col">
+      <div id="p2-badge">Step 2 / 5</div>
+      <h2 id="p2-title">Pick your mode</h2>
+      <div id="p2-bullets">
+        <div id="p2-b0" class="b"><span id="p2-b0-cur" class="cur">3 modes: Auto Deduct, Keep $200 in Bot, Free 12-Hour Trial</span><span id="p2-b0-old" class="old">3 modes: Auto Deduct, Keep $200 in Bot, Free 12-Hour Trial</span></div>
+        <div id="p2-b1" class="b"><span id="p2-b1-cur" class="cur">Select Auto Deduct</span><span id="p2-b1-old" class="old">Select Auto Deduct</span></div>
+        <div id="p2-b2" class="b"><span id="p2-b2-cur" class="cur">Check the API permissions it asks for</span><span id="p2-b2-old" class="old">Check the API permissions it asks for</span></div>
+      </div>
+    </div>
+    <div id="p2-lt0" class="lt"><div class="bar"></div><div class="lt-t">Free VIP channels</div><div class="lt-s">Access is included with the bot</div></div>
+    <div id="p2-lt1" class="lt"><div class="bar"></div><div class="lt-t">Reference image</div><div class="lt-s">The bot shows exactly which boxes to tick</div></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#p2-badge", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+    tl.fromTo("#p2-title", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.25);
+    tl.fromTo("#p2-b0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 6.2);
+    tl.fromTo("#p2-b0-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 11.2);
+    tl.fromTo("#p2-b0-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 11.2);
+    tl.fromTo("#p2-b1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 11.2);
+    tl.fromTo("#p2-b1-cur", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.inOut" }, 18.4);
+    tl.fromTo("#p2-b1-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 18.4);
+    tl.fromTo("#p2-b2", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 18.4);
+    tl.fromTo("#p2-lt0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.8);
+    tl.fromTo("#p2-lt0", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 5.3);
+    tl.fromTo("#p2-lt1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 25);
+    tl.fromTo("#p2-lt1", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 30.3);
+    tl.fromTo("#p2-col", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 31);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["step2-panel"] = tl;
+  </script>
+</template>
