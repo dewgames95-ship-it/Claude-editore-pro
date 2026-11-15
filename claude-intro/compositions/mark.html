@@ -1,0 +1,33 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: var(--ink); }
+    #root { --ground:#f5f3ee; --ink:#15171c; --muted:#5b616e; --line:#e2ded3; --card:#fff; --accent:#2563eb; --accent-soft:#dce7ff; }
+    .lockup { position: absolute; left: 0; top: 410px; width: 1440px; height: 440px; transform-origin: 50% 0; }
+    .kicker-row { position: absolute; left: 0; top: 0; width: 1440px; height: 48px; display: flex; justify-content: center; }
+    .kicker { height: 48px; padding: 0 22px; display: flex; align-items: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .rule-row { position: absolute; left: 0; top: 92px; width: 1440px; height: 24px; display: flex; justify-content: center; align-items: center; }
+    .rule { width: 160px; height: 8px; border-radius: 999px; background: var(--accent); }
+    .wordmark { position: absolute; left: 0; top: 146px; width: 1440px; text-align: center; font-size: 92px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; white-space: nowrap; }
+</style>
+  <div id="root" data-composition-id="mark" data-width="1440" data-height="1080"
+    data-composition-variables='[{"id":"kicker","type":"string","label":"Kicker","default":"TUTORIALS"},{"id":"wordmark","type":"string","label":"Wordmark","default":"Signal Follow Bot"}]'>
+
+      <div id="mark-lockup" class="lockup">
+        <div class="kicker-row"><div id="mark-kicker" class="kicker" data-var-text="kicker">TUTORIALS</div></div>
+        <div class="rule-row"><div id="mark-rule" class="rule"></div></div>
+        <h1 id="mark-wordmark" class="wordmark" data-var-text="wordmark">Signal Follow Bot</h1>
+
+      </div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#mark-rule", { opacity: 0, scale: 0.3, width: 24, height: 24 }, { opacity: 1, scale: 1, duration: 0.5, ease: "power3.out" }, 0.3);
+    tl.fromTo("#mark-rule", { width: 24, height: 24 }, { width: 160, height: 8, duration: 0.7, ease: "power3.inOut", immediateRender: false }, 1.1);
+    tl.fromTo("#mark-kicker", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.5);
+    tl.fromTo("#mark-wordmark", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 1.75);
+
+    window.__timelines["mark"] = tl;
+  </script>
+</template>

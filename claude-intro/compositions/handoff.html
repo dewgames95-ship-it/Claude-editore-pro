@@ -1,0 +1,43 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: var(--ink); }
+    #root { --ground:#f5f3ee; --ink:#15171c; --muted:#5b616e; --line:#e2ded3; --card:#fff; --accent:#2563eb; --accent-soft:#dce7ff; }
+    .lockup { position: absolute; left: 0; top: 410px; width: 1440px; height: 440px; transform-origin: 50% 0; }
+    .kicker-row { position: absolute; left: 0; top: 0; width: 1440px; height: 48px; display: flex; justify-content: center; }
+    .kicker { height: 48px; padding: 0 22px; display: flex; align-items: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .rule-row { position: absolute; left: 0; top: 92px; width: 1440px; height: 24px; display: flex; justify-content: center; align-items: center; }
+    .rule { width: 160px; height: 8px; border-radius: 999px; background: var(--accent); }
+    .wordmark { position: absolute; left: 0; top: 146px; width: 1440px; text-align: center; font-size: 92px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; white-space: nowrap; }
+
+    .subline { position: absolute; left: 0; top: 285px; width: 1440px; text-align: center; font-size: 34px; font-weight: 400; color: var(--muted); line-height: 1.2; }
+    .chips { position: absolute; left: 0; top: 365px; width: 1440px; display: flex; justify-content: center; gap: 16px; }
+    .chip { height: 56px; padding: 0 26px; display: flex; align-items: center; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-size: 28px; font-weight: 700; box-shadow: 0 12px 40px rgba(21,23,28,.10); }
+</style>
+  <div id="root" data-composition-id="handoff" data-width="1440" data-height="1080"
+    data-composition-variables='[{"id":"kicker","type":"string","label":"Kicker","default":"TUTORIALS"},{"id":"wordmark","type":"string","label":"Wordmark","default":"Signal Follow Bot"},{"id":"subline","type":"string","label":"Handoff line","default":"Step-by-step setup guides"},{"id":"chip1","type":"string","label":"Chip 1","default":"Easy setup"},{"id":"chip2","type":"string","label":"Chip 2","default":"No subscription"},{"id":"chip3","type":"string","label":"Chip 3","default":"Auto follow signals"}]'>
+
+      <div id="handoff-lockup" class="lockup">
+        <div class="kicker-row"><div id="handoff-kicker" class="kicker" data-var-text="kicker">TUTORIALS</div></div>
+        <div class="rule-row"><div id="handoff-rule" class="rule"></div></div>
+        <h1 id="handoff-wordmark" class="wordmark" data-var-text="wordmark">Signal Follow Bot</h1>
+        <p id="handoff-subline" class="subline" data-var-text="subline">Step-by-step setup guides</p>
+        <div class="chips">
+          <span id="handoff-chip1" class="chip" data-var-text="chip1">Easy setup</span>
+          <span id="handoff-chip2" class="chip" data-var-text="chip2">No subscription</span>
+          <span id="handoff-chip3" class="chip" data-var-text="chip3">Auto follow signals</span>
+        </div>
+      </div>
+
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#handoff-lockup", { y: -320, scale: 0.85 }, { y: -80, scale: 1, duration: 0.7, ease: "power2.inOut" }, 0);
+    tl.fromTo("#handoff-subline", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.4);
+    tl.fromTo("#handoff-chip1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.55);
+    tl.fromTo("#handoff-chip2", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.65);
+    tl.fromTo("#handoff-chip3", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.75);
+
+    window.__timelines["handoff"] = tl;
+  </script>
+</template>

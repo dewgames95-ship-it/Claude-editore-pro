@@ -1,61 +1,62 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  data-composition-variables='[
+    {"id":"kicker","type":"string","label":"Kicker badge","default":"TUTORIALS"},
+    {"id":"wordmark","type":"string","label":"Wordmark","default":"Signal Follow Bot"},
+    {"id":"tagline","type":"string","label":"Promise line","default":"Automate your trades. Skip the manual work."},
+    {"id":"subline","type":"string","label":"Handoff line","default":"Step-by-step setup guides"},
+    {"id":"chip1","type":"string","label":"Chip 1","default":"Easy setup"},
+    {"id":"chip2","type":"string","label":"Chip 2","default":"No subscription"},
+    {"id":"chip3","type":"string","label":"Chip 3","default":"Auto follow signals"}
+  ]'
+>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
+    <meta name="viewport" content="width=1440, height=1080" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
     <style>
-      /* Placeholders: replace all three with the film's own palette and display face. */
       :root {
-        --ground: #000;
-        --ink: #ffffff;
-        --font-display: sans-serif;
+        --ground: #f5f3ee;
+        --ink: #15171c;
+        --muted: #5b616e;
+        --line: #e2ded3;
+        --card: #ffffff;
+        --accent: #2563eb;
+        --accent-soft: #dce7ff;
+        --stage: #0f1218;
       }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-        width: 1920px;
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1440px;
         height: 1080px;
         overflow: hidden;
         background: var(--ground);
+        font-family: "Inter", sans-serif;
       }
-      #root {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--font-display);
-      }
-      #title {
-        color: var(--ink);
-        font-size: 72px;
-        font-weight: 600;
-        letter-spacing: -0.03em;
-      }
+      #bg { position: absolute; inset: 0; background: var(--ground); }
     </style>
   </head>
   <body>
-    <div
-      id="root"
-      data-composition-id="main"
-      data-start="0"
-      data-duration="10"
-      data-width="1920"
-      data-height="1080"
-    >
-      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">Title</h1>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="12" data-width="1440" data-height="1080">
+      <div id="bg"></div>
+
+      <!-- SCENE TEXT LIVES IN data-variable-values (one block per scene). Language swap = edit these values only. -->
+      <div id="mark" data-composition-id="mark" data-composition-src="compositions/mark.html"
+        data-start="0" data-duration="4.5" data-track-index="1" data-track-kind="graphics" data-width="1440" data-height="1080"
+        data-variable-values='{"kicker":"TUTORIALS","wordmark":"Signal Follow Bot"}'></div>
+
+      <div id="promise" data-composition-id="promise" data-composition-src="compositions/promise.html"
+        data-start="4.5" data-duration="4.5" data-track-index="1" data-track-kind="graphics" data-width="1440" data-height="1080"
+        data-variable-values='{"kicker":"TUTORIALS","wordmark":"Signal Follow Bot","tagline":"Automate your trades. Skip the manual work."}'></div>
+
+      <div id="handoff" data-composition-id="handoff" data-composition-src="compositions/handoff.html"
+        data-start="9" data-duration="3" data-track-index="1" data-track-kind="graphics" data-width="1440" data-height="1080"
+        data-variable-values='{"kicker":"TUTORIALS","wordmark":"Signal Follow Bot","subline":"Step-by-step setup guides","chip1":"Easy setup","chip2":"No subscription","chip3":"Auto follow signals"}'></div>
     </div>
     <script>
-      const tl = gsap.timeline({ paused: true });
-      // Example: tl.fromTo("#title", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0);
-      window.__timelines["main"] = tl;
-      tl.seek(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
     </script>
   </body>
 </html>

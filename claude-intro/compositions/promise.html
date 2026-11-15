@@ -1,0 +1,38 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; font-family: "Inter", sans-serif; color: var(--ink); }
+    #root { --ground:#f5f3ee; --ink:#15171c; --muted:#5b616e; --line:#e2ded3; --card:#fff; --accent:#2563eb; --accent-soft:#dce7ff; }
+    .lockup { position: absolute; left: 0; top: 410px; width: 1440px; height: 440px; transform-origin: 50% 0; }
+    .kicker-row { position: absolute; left: 0; top: 0; width: 1440px; height: 48px; display: flex; justify-content: center; }
+    .kicker { height: 48px; padding: 0 22px; display: flex; align-items: center; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .rule-row { position: absolute; left: 0; top: 92px; width: 1440px; height: 24px; display: flex; justify-content: center; align-items: center; }
+    .rule { width: 160px; height: 8px; border-radius: 999px; background: var(--accent); }
+    .wordmark { position: absolute; left: 0; top: 146px; width: 1440px; text-align: center; font-size: 92px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; white-space: nowrap; }
+
+    .banner { position: absolute; left: 400px; top: 390px; width: 640px; height: 360px; border-radius: 28px; box-shadow: 0 12px 40px rgba(21,23,28,.10); object-fit: contain; }
+    .tagline { position: absolute; left: 0; top: 800px; width: 1440px; text-align: center; font-size: 40px; font-weight: 700; line-height: 1.2; }
+</style>
+  <div id="root" data-composition-id="promise" data-width="1440" data-height="1080"
+    data-composition-variables='[{"id":"kicker","type":"string","label":"Kicker","default":"TUTORIALS"},{"id":"wordmark","type":"string","label":"Wordmark","default":"Signal Follow Bot"},{"id":"tagline","type":"string","label":"Promise line","default":"Automate your trades. Skip the manual work."}]'>
+
+      <div id="promise-lockup" class="lockup">
+        <div class="kicker-row"><div id="promise-kicker" class="kicker" data-var-text="kicker">TUTORIALS</div></div>
+        <div class="rule-row"><div id="promise-rule" class="rule"></div></div>
+        <h1 id="promise-wordmark" class="wordmark" data-var-text="wordmark">Signal Follow Bot</h1>
+
+      </div>
+      <img id="promise-banner" class="banner" src="assets/brand_banner.png" alt="Signal Follow Bot banner" />
+      <p id="promise-tagline" class="tagline" data-var-text="tagline">Automate your trades. Skip the manual work.</p>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#promise-lockup", { y: 0, scale: 1 }, { y: -320, scale: 0.85, duration: 0.8, ease: "power2.inOut" }, 0.3);
+    tl.fromTo("#promise-banner", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 1.0);
+    tl.fromTo("#promise-tagline", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.4);
+    tl.to("#promise-banner", { opacity: 0, duration: 0.3, ease: "power2.in" }, 4.05);
+    tl.to("#promise-tagline", { opacity: 0, duration: 0.3, ease: "power2.in" }, 4.05);
+
+    window.__timelines["promise"] = tl;
+  </script>
+</template>
