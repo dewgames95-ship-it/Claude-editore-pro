@@ -1,0 +1,160 @@
+{
+  "_readme": "Single source of truth for the long tutorial. Edit this file, then run: node tools/build.mjs. All step times (t, t0, t1) are seconds in the ORIGINAL clip; the build maps them onto the final timeline. Zoom cx/cy and box [x,y,w,h] are pixels in the 588x1280 source recording.",
+  "canvas": { "width": 1440, "height": 1080, "fps": 30 },
+  "source": { "width": 588, "height": 1280, "duration": 132.2 },
+  "timing": { "title": 3.0, "chapter": 2.5, "recap": 10.0, "outro": 4.0 },
+  "brand": { "name": "Signal Follow Bot", "banner": "assets/brand_banner.png" },
+  "title": {
+    "kicker": "Signal Follow Bot · Tutorial",
+    "headline": "Connect your Binance API",
+    "sub": "Step by step, in 5 short steps"
+  },
+  "outro": {
+    "headline": "Binance is connected",
+    "sub": "Next in the bot: tap “Whitelist address” to finish setup",
+    "cta": "More Signal Follow Bot tutorials on this channel"
+  },
+  "steps": [
+    {
+      "id": "step1",
+      "video": "assets/step1.mp4",
+      "clipStart": 0.0,
+      "clipEnd": 11.2,
+      "title": "Connect your exchange",
+      "chapterSub": "Open the bot and choose Binance",
+      "bullets": [
+        { "t": 0.6, "text": "Tap “Connect Exchange”" },
+        { "t": 7.4, "text": "Choose Binance" }
+      ],
+      "zooms": [
+        { "t0": 0.8, "t1": 3.6, "cx": 294, "cy": 576, "scale": 1.6, "box": [16, 548, 556, 56] },
+        { "t0": 7.4, "t1": 10.8, "cx": 294, "cy": 880, "scale": 1.6, "box": [16, 852, 556, 56] }
+      ],
+      "lowerThirds": [
+        { "t0": 4.0, "t1": 7.2, "title": "Signal Follow Bot", "sub": "Telegram bot · main menu" }
+      ],
+      "recap": {
+        "avatar": "assets/avatar_01.mp4",
+        "happened": "You opened the bot, tapped Connect Exchange and picked Binance.",
+        "next": "Choose the mode the bot will run in.",
+        "tip": "Binance and BingX are the recommended exchanges. You can connect up to 2 accounts."
+      }
+    },
+    {
+      "id": "step2",
+      "video": "assets/step2.mp4",
+      "clipStart": 11.2,
+      "clipEnd": 42.5,
+      "title": "Pick your mode",
+      "chapterSub": "Auto Deduct, Keep $200 in Bot or Free 12-Hour Trial",
+      "bullets": [
+        { "t": 17.4, "text": "3 modes: Auto Deduct, Keep $200 in Bot, Free 12-Hour Trial" },
+        { "t": 22.4, "text": "Select Auto Deduct" },
+        { "t": 29.6, "text": "Check the API permissions it asks for" }
+      ],
+      "zooms": [
+        { "t0": 21.4, "t1": 23.6, "cx": 294, "cy": 880, "scale": 1.6, "box": [16, 852, 556, 56] },
+        { "t0": 29.4, "t1": 32.1, "cx": 294, "cy": 824, "scale": 1.6, "box": [14, 768, 410, 112] },
+        { "t0": 32.9, "t1": 35.3, "cx": 294, "cy": 688, "scale": 1.6, "box": [14, 625, 470, 125] }
+      ],
+      "lowerThirds": [
+        { "t0": 12.0, "t1": 16.8, "title": "Free VIP channels", "sub": "Access is included with the bot" },
+        { "t0": 36.2, "t1": 41.8, "title": "Reference image", "sub": "The bot shows exactly which boxes to tick" }
+      ],
+      "recap": {
+        "avatar": "assets/avatar_02.mp4",
+        "happened": "You selected Auto Deduct: a 20% share of net profit, charged only when you profit.",
+        "next": "Create an API key inside the Binance app.",
+        "tip": "Keep at least $5 USDT in your Funding wallet. The profit share is deducted from there."
+      }
+    },
+    {
+      "id": "step3",
+      "video": "assets/step3.mp4",
+      "clipStart": 42.5,
+      "clipEnd": 73.0,
+      "title": "Create the API key",
+      "chapterSub": "Inside the Binance app",
+      "bullets": [
+        { "t": 46.4, "text": "Open Binance and search “API”" },
+        { "t": 52.6, "text": "Tap Create API, keep “System generated”" },
+        { "t": 60.8, "text": "Name it (for example Mybot), tap Next" },
+        { "t": 67.0, "text": "Confirm 2FA. Your key is created" }
+      ],
+      "zooms": [
+        { "t0": 46.6, "t1": 48.4, "cx": 294, "cy": 100, "scale": 1.6, "box": [50, 76, 480, 50] },
+        { "t0": 49.4, "t1": 51.6, "cx": 294, "cy": 250, "scale": 1.6, "box": [16, 222, 140, 54] },
+        { "t0": 53.0, "t1": 55.2, "cx": 294, "cy": 266, "scale": 1.6, "box": [20, 238, 170, 56] },
+        { "t0": 60.6, "t1": 64.4, "cx": 294, "cy": 520, "scale": 1.6, "box": [96, 450, 400, 60] },
+        { "t0": 64.6, "t1": 66.2, "cx": 294, "cy": 560, "scale": 1.6, "box": [306, 572, 186, 60] },
+        { "t0": 68.0, "t1": 70.6, "cx": 294, "cy": 240, "scale": 1.6, "box": [196, 168, 200, 48] }
+      ],
+      "lowerThirds": [
+        { "t0": 43.2, "t1": 46.2, "title": "Binance app", "sub": "Search → Functions → API" }
+      ],
+      "recap": {
+        "avatar": "assets/avatar_03.mp4",
+        "happened": "You created a system-generated API key called Mybot and confirmed it with 2FA.",
+        "next": "Tap Edit, then set the permissions and the trusted IP.",
+        "tip": "The Secret Key is shown in full only once. Finish the setup before you leave this page."
+      }
+    },
+    {
+      "id": "step4",
+      "video": "assets/step4.mp4",
+      "clipStart": 73.0,
+      "clipEnd": 96.5,
+      "title": "Set permissions and IP",
+      "chapterSub": "Edit the key before you take the screenshot",
+      "bullets": [
+        { "t": 73.4, "text": "Tap Edit first" },
+        { "t": 79.4, "text": "Enable Reading, Spot & Margin, Futures, Universal Transfer" },
+        { "t": 83.0, "text": "Restrict to trusted IP 78.105.158.130" },
+        { "t": 87.7, "text": "Enable Withdrawals, then Save" }
+      ],
+      "zooms": [
+        { "t0": 80.3, "t1": 82.4, "cx": 294, "cy": 458, "scale": 1.5, "box": [40, 322, 440, 272] },
+        { "t0": 85.3, "t1": 86.9, "cx": 294, "cy": 641, "scale": 1.6, "box": [100, 613, 440, 56] },
+        { "t0": 89.2, "t1": 91.6, "cx": 294, "cy": 796, "scale": 1.6, "box": [40, 772, 330, 48] },
+        { "t0": 94.0, "t1": 95.4, "cx": 294, "cy": 346, "scale": 1.6, "box": [328, 322, 96, 48] }
+      ],
+      "lowerThirds": [
+        { "t0": 83.4, "t1": 85.2, "title": "Copy the IP from the bot", "sub": "78.105.158.130 · tap to copy" }
+      ],
+      "recap": {
+        "avatar": "assets/avatar_04.mp4",
+        "happened": "You enabled Reading, Spot & Margin, Futures, Universal Transfer and Withdrawals, locked the key to the bot's IP and saved.",
+        "next": "Send the key's QR code to the bot.",
+        "tip": "With the IP restriction on, the key only works from 78.105.158.130."
+      }
+    },
+    {
+      "id": "step5",
+      "video": "assets/step5.mp4",
+      "clipStart": 96.5,
+      "clipEnd": 132.2,
+      "title": "Send the QR to the bot",
+      "chapterSub": "Screenshot, send, connected",
+      "bullets": [
+        { "t": 97.4, "text": "Save, then screenshot the API QR code" },
+        { "t": 102.8, "text": "Send the screenshot in the bot chat" },
+        { "t": 105.0, "text": "If it fails, crop tight around the QR and resend" },
+        { "t": 126.4, "text": "Binance connected, Futures balance shown" }
+      ],
+      "zooms": [
+        { "t0": 104.6, "t1": 107.6, "cx": 294, "cy": 828, "scale": 1.6, "box": [14, 765, 450, 128] },
+        { "t0": 117.9, "t1": 119.0, "cx": 400, "cy": 1100, "scale": 1.6, "box": [488, 1176, 80, 70] },
+        { "t0": 126.6, "t1": 131.4, "cx": 294, "cy": 886, "scale": 1.6, "box": [14, 838, 430, 100] }
+      ],
+      "lowerThirds": [
+        { "t0": 109.2, "t1": 115.8, "title": "Second try", "sub": "Take a new screenshot and crop it to the QR" }
+      ],
+      "recap": {
+        "avatar": "assets/avatar_05.mp4",
+        "happened": "The bot read your QR screenshot and replied “Binance connected” with your Futures balance.",
+        "next": "Tap “Whitelist address” in the bot. It is the last required step.",
+        "tip": "If the bot says the key format is wrong, crop the screenshot tight around the QR and send it again."
+      }
+    }
+  ]
+}
