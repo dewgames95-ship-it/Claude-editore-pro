@@ -26,6 +26,10 @@ Translators: copy to script_<lang>.md, translate the on-screen text and spoken t
 - Bullet @00:12.9: Choose Binance
 - Lower third @00:09.5: Signal Follow Bot / Telegram bot · main menu
 
+**Spoken**
+
+In this video I will show you step by step how to connect your API exchange. So we will click on connect exchange then we click on I am considering Binance.
+
 ## 00:16.7 - 00:26.7  Step 1 recap (card)
 
 **On screen**
@@ -50,6 +54,10 @@ Translators: copy to script_<lang>.md, translate the on-screen text and spoken t
 - Bullet @00:47.6: Check the API permissions it asks for
 - Lower third @00:30.0: Free VIP channels / Access is included with the bot
 - Lower third @00:54.2: Reference image / The bot shows exactly which boxes to tick
+
+**Spoken**
+
+And here are the different mode and you get this two channel free access. And there are three modes auto -deduct bot deposit and 12-hour free trial. I will select auto -deduct and you can read all the details. And it ask for details like this. The withdraw permission it ask but it cannot withdraw without your approval. So there is no need to worry. We have to process like this. Don't worry I will show you properly.
 
 ## 01:00.5 - 01:10.5  Step 2 recap (card)
 
@@ -76,6 +84,10 @@ Translators: copy to script_<lang>.md, translate the on-screen text and spoken t
 - Bullet @01:37.5: Confirm 2FA. Your key is created
 - Lower third @01:13.7: Binance app / Search → Functions → API
 
+**Spoken**
+
+We will open Binance. I will search here API function. Here functions we will click here and we just need to create API. And just next make sure you follow the steps properly as I am doing. Put any name here like I am putting My bot. Click on next. Then here after confirming 2FA here you get your API keys.
+
 ## 01:43.5 - 01:53.5  Step 3 recap (card)
 
 **On screen**
@@ -101,6 +113,10 @@ Translators: copy to script_<lang>.md, translate the on-screen text and spoken t
 - Bullet @02:10.7: Enable Withdrawals, then Save
 - Lower third @02:06.4: Copy the IP from the bot / 78.105.158.130 · tap to copy
 
+**Spoken**
+
+So you need to edit the first. You edit first before taking screen shot. Here enable all this permission that I am doing. And here you need to just enable the IP address. And then enable withdraw. I am telling you that the withdraw option it is very safe.
+
 ## 02:19.5 - 02:29.5  Step 4 recap (card)
 
 **On screen**
@@ -125,6 +141,10 @@ Translators: copy to script_<lang>.md, translate the on-screen text and spoken t
 - Bullet @02:40.5: If it fails, crop tight around the QR and resend
 - Bullet @03:01.9: Binance connected, Futures balance shown
 - Lower third @02:44.7: Second try / Take a new screenshot and crop it to the QR
+
+**Spoken**
+
+Just click on and here I am doing with scan QR code. So I am sending this. It is wrong. Anyways I will try again. Let me grab this. Now I will click on here again and send. And here I think it will connect now. Here my account is connected and I can see my futures balance. So you can do like this. Thanks.
 
 ## 03:07.7 - 03:17.7  Step 5 recap (card)
 

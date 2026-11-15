@@ -1,0 +1,244 @@
+1
+00:00:00,000 --> 00:00:01,600
+In this video I will show
+
+2
+00:00:01,600 --> 00:00:02,960
+you step by step how to
+
+3
+00:00:02,960 --> 00:00:04,560
+connect your API exchange.
+
+4
+00:00:05,700 --> 00:00:06,860
+So we will click on connect
+
+5
+00:00:06,860 --> 00:00:09,300
+exchange then we click on I
+
+6
+00:00:09,300 --> 00:00:10,840
+am considering Binance.
+
+7
+00:00:11,560 --> 00:00:13,960
+And here are the different mode
+
+8
+00:00:13,960 --> 00:00:15,880
+and you get this two channel
+
+9
+00:00:15,880 --> 00:00:16,680
+free access.
+
+10
+00:00:17,400 --> 00:00:19,380
+And there are three modes auto
+
+11
+00:00:19,380 --> 00:00:21,840
+-deduct bot deposit and 12-hour free
+
+12
+00:00:21,840 --> 00:00:22,140
+trial.
+
+13
+00:00:22,580 --> 00:00:24,800
+I will select auto -deduct and
+
+14
+00:00:24,800 --> 00:00:26,500
+you can read all the details.
+
+15
+00:00:26,500 --> 00:00:29,180
+And it ask for details like
+
+16
+00:00:29,180 --> 00:00:29,480
+this.
+
+17
+00:00:29,920 --> 00:00:31,980
+The withdraw permission it ask but
+
+18
+00:00:31,980 --> 00:00:34,720
+it cannot withdraw without your approval.
+
+19
+00:00:34,940 --> 00:00:36,020
+So there is no need to
+
+20
+00:00:36,020 --> 00:00:36,240
+worry.
+
+21
+00:00:36,440 --> 00:00:39,460
+We have to process like this.
+
+22
+00:00:40,320 --> 00:00:41,660
+Don't worry I will show you
+
+23
+00:00:41,660 --> 00:00:42,040
+properly.
+
+24
+00:00:43,000 --> 00:00:45,980
+We will open Binance.
+
+25
+00:00:46,360 --> 00:00:47,980
+I will search here API function.
+
+26
+00:00:49,020 --> 00:00:51,940
+Here functions we will click here
+
+27
+00:00:51,940 --> 00:00:54,100
+and we just need to create
+
+28
+00:00:54,100 --> 00:00:54,560
+API.
+
+29
+00:00:54,560 --> 00:00:57,540
+And just next make sure you
+
+30
+00:00:57,540 --> 00:00:59,860
+follow the steps properly as I
+
+31
+00:00:59,860 --> 00:01:00,240
+am doing.
+
+32
+00:01:00,780 --> 00:01:02,920
+Put any name here like I
+
+33
+00:01:02,920 --> 00:01:03,740
+am putting My bot.
+
+34
+00:01:04,820 --> 00:01:06,120
+Click on next.
+
+35
+00:01:07,020 --> 00:01:10,960
+Then here after confirming 2FA here
+
+36
+00:01:10,960 --> 00:01:12,680
+you get your API keys.
+
+37
+00:01:13,360 --> 00:01:15,380
+So you need to edit the
+
+38
+00:01:15,380 --> 00:01:15,860
+first.
+
+39
+00:01:16,060 --> 00:01:18,660
+You edit first before taking screen
+
+40
+00:01:18,660 --> 00:01:18,920
+shot.
+
+41
+00:01:19,360 --> 00:01:21,700
+Here enable all this permission that
+
+42
+00:01:21,700 --> 00:01:22,180
+I am doing.
+
+43
+00:01:22,180 --> 00:01:24,680
+And here you need to just
+
+44
+00:01:24,680 --> 00:01:26,960
+enable the IP address.
+
+45
+00:01:27,680 --> 00:01:28,740
+And then enable withdraw.
+
+46
+00:01:31,000 --> 00:01:33,940
+I am telling you that the
+
+47
+00:01:33,940 --> 00:01:36,060
+withdraw option it is very safe.
+
+48
+00:01:36,760 --> 00:01:39,680
+Just click on and here I
+
+49
+00:01:39,680 --> 00:01:42,080
+am doing with scan QR code.
+
+50
+00:01:42,840 --> 00:01:44,480
+So I am sending this.
+
+51
+00:01:44,860 --> 00:01:45,500
+It is wrong.
+
+52
+00:01:46,100 --> 00:01:47,560
+Anyways I will try again.
+
+53
+00:01:49,940 --> 00:01:51,220
+Let me grab this.
+
+54
+00:01:56,860 --> 00:01:58,700
+Now I will click on here
+
+55
+00:01:58,700 --> 00:01:59,660
+again and send.
+
+56
+00:02:01,320 --> 00:02:03,500
+And here I think it will
+
+57
+00:02:03,500 --> 00:02:04,340
+connect now.
+
+58
+00:02:06,420 --> 00:02:08,260
+Here my account is connected and
+
+59
+00:02:08,260 --> 00:02:09,600
+I can see my futures balance.
+
+60
+00:02:10,060 --> 00:02:11,280
+So you can do like this.
+
+61
+00:02:11,640 --> 00:02:12,000
+Thanks.
+
