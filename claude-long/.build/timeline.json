@@ -128,15 +128,6 @@
    "mid": 49.05
   },
   {
-   "step": 2,
-   "k": 3,
-   "hold": [
-    51.5,
-    53.3
-   ],
-   "mid": 52.4
-  },
-  {
    "step": 3,
    "k": 1,
    "hold": [
@@ -150,40 +141,49 @@
    "k": 2,
    "hold": [
     80.5,
-    82.1
+    81.5
    ],
-   "mid": 81.3
+   "mid": 81
   },
   {
    "step": 3,
    "k": 3,
    "hold": [
-    84.1,
-    85.7
+    82.9,
+    84.1
    ],
-   "mid": 84.9
+   "mid": 83.5
   },
   {
    "step": 3,
    "k": 4,
    "hold": [
-    91.7,
-    94.9
+    85.3,
+    86
    ],
-   "mid": 93.3
+   "mid": 85.65
   },
   {
    "step": 3,
    "k": 5,
    "hold": [
-    95.7,
-    96.7
+    91.7,
+    94.1
    ],
-   "mid": 96.2
+   "mid": 92.9
   },
   {
    "step": 3,
    "k": 6,
+   "hold": [
+    94.9,
+    95.6
+   ],
+   "mid": 95.25
+  },
+  {
+   "step": 3,
+   "k": 7,
    "hold": [
     99.1,
     101.1
@@ -238,15 +238,6 @@
   {
    "step": 5,
    "k": 2,
-   "hold": [
-    174,
-    174.5
-   ],
-   "mid": 174.25
-  },
-  {
-   "step": 5,
-   "k": 3,
    "hold": [
     182.7,
     186.9
@@ -510,8 +501,8 @@
   {
    "step": 2,
    "open": 35.3,
-   "close": 37.28,
-   "text": "And there are three modes auto",
+   "close": 36.88,
+   "text": "And there are three modes",
    "words": [
     [
      35.4,
@@ -532,21 +523,17 @@
     [
      36.68,
      36.98
-    ],
-    [
-     36.98,
-     37.38
     ]
    ]
   },
   {
    "step": 2,
-   "open": 37.28,
+   "open": 36.88,
    "close": 39.46,
-   "text": "-deduct bot deposit and 12-hour",
+   "text": "auto-deduct bot deposit and 12-hour",
    "words": [
     [
-     37.38,
+     36.98,
      37.84
     ],
     [
@@ -586,8 +573,8 @@
   {
    "step": 2,
    "open": 40.48,
-   "close": 42.7,
-   "text": "I will select auto -deduct and",
+   "close": 43.2,
+   "text": "I will select auto-deduct and you",
    "words": [
     [
      40.58,
@@ -603,28 +590,24 @@
     ],
     [
      41.2,
-     41.64
-    ],
-    [
-     41.64,
      42.16
     ],
     [
      42.16,
      42.8
+    ],
+    [
+     42.8,
+     43.3
     ]
    ]
   },
   {
    "step": 2,
-   "open": 42.7,
+   "open": 43.2,
    "close": 44.4,
-   "text": "you can read all the details.",
+   "text": "can read all the details.",
    "words": [
-    [
-     42.8,
-     43.3
-    ],
     [
      43.3,
      43.46

@@ -45,7 +45,7 @@ const steps = S.steps.map((st, i) => {
   const rl = recapLayout(st, i);
   const recap = { start: f3(cursor), dur: rl.duration, layout: rl };
   cursor += rl.duration;
-  return { ...st, n: i + 1, chapter, seg, recap, fin: (t) => f3(seg.start + (t - st.clipStart)) };
+  return { ...st, n: i + 1, chapter, seg, recap, text: st.recap, fin: (t) => f3(seg.start + (t - st.clipStart)) };
 });
 const OUTRO = { start: f3(cursor), dur: S.timing.outro };
 const TOTAL = f3(cursor + S.timing.outro);
@@ -128,7 +128,7 @@ ${js}
 }
 const ENTER = `duration: 0.5, ease: "power3.out"`;
 const enter = (sel, at, y = 28) => `    tl.fromTo("${sel}", { opacity: 0, y: ${y} }, { opacity: 1, y: 0, ${ENTER} }, ${f3(at)});`;
-const exitAt = (sel, at) => `    tl.fromTo("${sel}", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, ${f3(at)});`;
+const exitAt = (sel, at) => `    tl.fromTo("${sel}", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in", immediateRender: false }, ${f3(at)});`;
 const out = {};
 const write = (name, html) => { out[name] = html; };
 
@@ -137,7 +137,7 @@ write("00-title", scene({
   id: "title",
   css: `    #t-wrap { position: absolute; inset: 0; }
     #t-text { position: absolute; left: 80px; top: 300px; width: 680px; }
-    #t-kicker { font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+    #t-kicker { font-size: 28px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
     #t-head { margin-top: 26px; font-size: 92px; font-weight: 900; letter-spacing: -0.03em; line-height: 1.04; }
     #t-sub { margin-top: 30px; font-size: 38px; font-weight: 400; color: var(--muted); line-height: 1.3; }
     #t-banner { position: absolute; left: 800px; top: 382px; width: 560px; height: 315px; border-radius: 28px; overflow: hidden; box-shadow: 0 12px 40px rgba(21,23,28,.10); border: 1px solid var(--line); }
@@ -232,18 +232,18 @@ ${lts}`,
 for (const st of steps) {
   const p = `r${st.n}`;
   const av = st.recap.layout.mode === "avatar";
-  const blocks = [["WHAT JUST HAPPENED", st.recap.happened, 0.4], ["WHAT’S NEXT", st.recap.next, 3.3], ["QUICK TIP", st.recap.tip, 6.2]];
+  const blocks = [["WHAT JUST HAPPENED", st.text.happened, 0.4], ["WHAT’S NEXT", st.text.next, 3.3], ["QUICK TIP", st.text.tip, 6.2]];
   const bhtml = blocks.map((b, j) => `        <div id="${p}-b${j}" class="blk"><div class="lab">${b[0]}</div><div class="body">${esc(b[1])}</div></div>`).join("\n");
   const js = [enter(`#${p}-head`, 0.0, 16), ...blocks.map((b, j) => enter(`#${p}-b${j}`, b[2])), exitAt(`#${p}-wrap`, st.recap.dur - 0.3)];
   write(`step${st.n}-recap`, scene({
     id: `step${st.n}-recap`,
     css: `    #root { background: var(--ground); }
     #${p}-wrap { position: absolute; inset: 0; }
-    #${p}-head { position: absolute; left: 80px; top: 80px; width: 1280px; }
+    #${p}-head { position: absolute; left: 80px; top: 110px; width: 1280px; }
     #${p}-kick { font-size: 26px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
     #${p}-h1 { margin-top: 8px; font-size: 72px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.05; }
-    #${p}-blocks { position: absolute; left: ${av ? 700 : 80}px; top: ${av ? 240 : 250}px; width: ${av ? 660 : 1280}px; }
-    .blk { border-top: 2px solid var(--line); padding-top: 16px; margin-bottom: 28px; }
+    #${p}-blocks { position: absolute; left: ${av ? 700 : 80}px; top: ${av ? 280 : 330}px; width: ${av ? 660 : 1280}px; }
+    .blk { border-top: 2px solid var(--line); padding-top: 22px; margin-bottom: 44px; }
     .lab { font-size: 24px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); }
     .body { margin-top: 8px; font-size: 40px; font-weight: 700; line-height: 1.22; }`,
     body: `    <div id="${p}-wrap">
@@ -260,7 +260,7 @@ ${bhtml}
 {
   const css = `    .cg { position: absolute; left: 0; width: ${W}px; bottom: ${H - 1020}px; text-align: center; line-height: 0; font-size: 0; opacity: 0; visibility: hidden; overflow: visible; }
     .cb { display: inline-block; vertical-align: bottom; background: var(--card); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 12px 40px rgba(21,23,28,.10); padding: 14px 26px; white-space: nowrap; font-size: 52px; font-weight: 700; line-height: 1.2; }
-    .cw { display: inline-block; padding: 2px 10px; margin: 0 -3px; border-radius: 14px; color: var(--muted); background-color: rgba(37,99,235,0); }`;
+    .cw { display: inline-block; padding: 2px 10px; margin: 0 2px; border-radius: 14px; color: var(--muted); background-color: rgba(37,99,235,0); }`;
   let body = "", js = [];
   capGroups.forEach((g, gi) => {
     const id = `cap-g${gi}`;
@@ -387,7 +387,7 @@ const indexHtml = `<!doctype html>
     <div id="root" data-composition-id="main" data-start="0" data-duration="${TOTAL}" data-width="${W}" data-height="${H}">
       <div id="bg"></div>
       <div id="stage">
-        <div id="camera">
+        <div id="camera" data-layout-allow-overflow>
 ${videos}
 ${boxes}        </div>
       </div>
@@ -423,7 +423,7 @@ for (const st of steps) {
   row(st.seg.start, st.seg.start + st.seg.dur, `Step ${st.n} footage: ${st.title}`,
     [`Badge: STEP ${st.n} / ${steps.length}`, `Title: ${st.title}`, ...st.bullets.map((b) => `Bullet @${tc(st.fin(b.t))}: ${b.text}`), ...st.lowerThirds.map((l) => `Lower third @${tc(st.fin(l.t0))}: ${l.title} / ${l.sub}`)], spoken);
   row(st.recap.start, st.recap.start + st.recap.dur, `Step ${st.n} recap (${st.recap.layout.mode})`,
-    [`What just happened: ${st.recap.happened}`, `What's next: ${st.recap.next}`, `Quick tip: ${st.recap.tip}`]);
+    [`What just happened: ${st.text.happened}`, `What's next: ${st.text.next}`, `Quick tip: ${st.text.tip}`]);
 }
 row(OUTRO.start, TOTAL, "Outro", [S.outro.headline, S.outro.sub, S.outro.cta]);
 fs.writeFileSync(P("script_en.md"), md);

@@ -40,10 +40,10 @@
     tl.fromTo("#p2-b1-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 18.4);
     tl.fromTo("#p2-b2", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 18.4);
     tl.fromTo("#p2-lt0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.8);
-    tl.fromTo("#p2-lt0", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 5.3);
+    tl.fromTo("#p2-lt0", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in", immediateRender: false }, 5.3);
     tl.fromTo("#p2-lt1", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 25);
-    tl.fromTo("#p2-lt1", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 30.3);
-    tl.fromTo("#p2-col", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 31);
+    tl.fromTo("#p2-lt1", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in", immediateRender: false }, 30.3);
+    tl.fromTo("#p2-col", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in", immediateRender: false }, 31);
     window.__timelines = window.__timelines || {};
     window.__timelines["step2-panel"] = tl;
   </script>

@@ -21,7 +21,7 @@
     <div id="root" data-composition-id="main" data-start="0" data-duration="201.7" data-width="1440" data-height="1080">
       <div id="bg"></div>
       <div id="stage">
-        <div id="camera">
+        <div id="camera" data-layout-allow-overflow>
         <video id="step1-video" class="clip" src="assets/step1.mp4" data-start="5.5" data-duration="11.2" data-track-index="0" playsinline data-has-audio="true"></video>
         <video id="step2-video" class="clip" src="assets/step2.mp4" data-start="29.2" data-duration="31.3" data-track-index="0" playsinline data-has-audio="true"></video>
         <video id="step3-video" class="clip" src="assets/step3.mp4" data-start="73" data-duration="30.5" data-track-index="0" playsinline data-has-audio="true"></video>
@@ -31,20 +31,19 @@
         <div id="step1-box2" class="hb" style="left:165.391px;top:565.781px;width:369.219px;height:37.188px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step2-box1" class="hb" style="left:165.391px;top:565.781px;width:369.219px;height:37.188px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step2-box2" class="hb" style="left:164.063px;top:510px;width:272.266px;height:74.375px;border-width:2.5px;border-radius:7.5px"></div>
-        <div id="step2-box3" class="hb" style="left:164.063px;top:415.039px;width:312.109px;height:83.008px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step3-box1" class="hb" style="left:187.969px;top:50.469px;width:318.75px;height:33.203px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step3-box2" class="hb" style="left:165.391px;top:147.422px;width:92.969px;height:35.859px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step3-box3" class="hb" style="left:168.047px;top:158.047px;width:112.891px;height:37.188px;border-width:2.5px;border-radius:7.5px"></div>
-        <div id="step3-box4" class="hb" style="left:218.516px;top:298.828px;width:265.625px;height:39.844px;border-width:2.5px;border-radius:7.5px"></div>
-        <div id="step3-box5" class="hb" style="left:357.969px;top:379.844px;width:123.516px;height:39.844px;border-width:2.5px;border-radius:7.5px"></div>
-        <div id="step3-box6" class="hb" style="left:284.922px;top:111.563px;width:132.813px;height:31.875px;border-width:2.5px;border-radius:7.5px"></div>
+        <div id="step3-box4" class="hb" style="left:168.047px;top:306.797px;width:363.906px;height:166.016px;border-width:2.857px;border-radius:8.571px"></div>
+        <div id="step3-box5" class="hb" style="left:218.516px;top:298.828px;width:265.625px;height:39.844px;border-width:2.5px;border-radius:7.5px"></div>
+        <div id="step3-box6" class="hb" style="left:357.969px;top:379.844px;width:123.516px;height:39.844px;border-width:2.5px;border-radius:7.5px"></div>
+        <div id="step3-box7" class="hb" style="left:284.922px;top:111.563px;width:132.813px;height:31.875px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step4-box1" class="hb" style="left:181.328px;top:213.828px;width:292.188px;height:180.625px;border-width:2.667px;border-radius:8px"></div>
         <div id="step4-box2" class="hb" style="left:221.172px;top:407.07px;width:292.188px;height:37.188px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step4-box3" class="hb" style="left:181.328px;top:512.656px;width:219.141px;height:31.875px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step4-box4" class="hb" style="left:372.578px;top:213.828px;width:63.75px;height:31.875px;border-width:2.5px;border-radius:7.5px"></div>
         <div id="step5-box1" class="hb" style="left:164.063px;top:508.008px;width:298.828px;height:85px;border-width:2.5px;border-radius:7.5px"></div>
-        <div id="step5-box2" class="hb" style="left:478.828px;top:780.938px;width:53.125px;height:46.484px;border-width:2.5px;border-radius:7.5px"></div>
-        <div id="step5-box3" class="hb" style="left:164.063px;top:556.484px;width:285.547px;height:66.406px;border-width:2.5px;border-radius:7.5px"></div>
+        <div id="step5-box2" class="hb" style="left:164.063px;top:556.484px;width:285.547px;height:66.406px;border-width:2.5px;border-radius:7.5px"></div>
         </div>
       </div>
       <div id="title" data-composition-id="title" data-composition-src="compositions/00-title.html" data-start="0" data-duration="3" data-track-index="1" data-track-kind="graphics" data-width="1440" data-height="1080" style="z-index:2"></div>
@@ -89,12 +88,9 @@
       tl.fromTo("#step2-box1", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 40);
       tl.fromTo("#step2-box1", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 41.4);
       tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":-450.5,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 47.4);
+      tl.fromTo("#camera", {"x":-210,"y":-450.5,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 50.1);
       tl.fromTo("#step2-box2", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 48);
       tl.fromTo("#step2-box2", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 49.9);
-      tl.fromTo("#camera", {"x":-210,"y":-450.5,"scale":1.6}, {"x":-210,"y":-306,"scale":1.6,"duration":1.4,"ease":"power2.inOut","immediateRender":false}, 50.1);
-      tl.fromTo("#camera", {"x":-210,"y":-306,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 53.3);
-      tl.fromTo("#step2-box3", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 51.5);
-      tl.fromTo("#step2-box3", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 53.1);
       tl.fromTo("#stage", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 73);
       tl.fromTo("#stage", {"opacity":1}, {"opacity":0,"duration":0.3,"ease":"power2.in","immediateRender":false}, 103.2);
       tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":0,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 77.1);
@@ -102,24 +98,26 @@
       tl.fromTo("#step3-box1", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 77.7);
       tl.fromTo("#step3-box1", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 78.7);
       tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":0,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 79.9);
-      tl.fromTo("#camera", {"x":-210,"y":0,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 82.1);
       tl.fromTo("#step3-box2", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 80.5);
-      tl.fromTo("#step3-box2", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 81.9);
-      tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":0,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 83.5);
-      tl.fromTo("#camera", {"x":-210,"y":0,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 85.7);
-      tl.fromTo("#step3-box3", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 84.1);
-      tl.fromTo("#step3-box3", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 85.5);
+      tl.fromTo("#step3-box2", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 81.3);
+      tl.fromTo("#camera", {"x":-210,"y":0,"scale":1.6}, {"x":-210,"y":0,"scale":1.6,"duration":1.4,"ease":"power2.inOut","immediateRender":false}, 81.5);
+      tl.fromTo("#step3-box3", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 82.9);
+      tl.fromTo("#step3-box3", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 83.9);
+      tl.fromTo("#camera", {"x":-210,"y":0,"scale":1.6}, {"x":-140,"y":-170,"scale":1.4,"duration":1.2,"ease":"power2.inOut","immediateRender":false}, 84.1);
+      tl.fromTo("#camera", {"x":-140,"y":-170,"scale":1.4}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 86);
+      tl.fromTo("#step3-box4", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 85.3);
+      tl.fromTo("#step3-box4", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 85.8);
       tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":-127.5,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 91.1);
-      tl.fromTo("#step3-box4", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 91.7);
-      tl.fromTo("#step3-box4", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 94.7);
-      tl.fromTo("#camera", {"x":-210,"y":-127.5,"scale":1.6}, {"x":-210,"y":-170,"scale":1.6,"duration":0.8,"ease":"power2.inOut","immediateRender":false}, 94.9);
-      tl.fromTo("#camera", {"x":-210,"y":-170,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 96.7);
-      tl.fromTo("#step3-box5", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 95.7);
-      tl.fromTo("#step3-box5", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 96.5);
+      tl.fromTo("#step3-box5", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 91.7);
+      tl.fromTo("#step3-box5", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 93.9);
+      tl.fromTo("#camera", {"x":-210,"y":-127.5,"scale":1.6}, {"x":-210,"y":-170,"scale":1.6,"duration":0.8,"ease":"power2.inOut","immediateRender":false}, 94.1);
+      tl.fromTo("#camera", {"x":-210,"y":-170,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 95.6);
+      tl.fromTo("#step3-box6", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 94.9);
+      tl.fromTo("#step3-box6", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 95.4);
       tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":0,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 98.5);
       tl.fromTo("#camera", {"x":-210,"y":0,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 101.1);
-      tl.fromTo("#step3-box6", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 99.1);
-      tl.fromTo("#step3-box6", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 100.9);
+      tl.fromTo("#step3-box7", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 99.1);
+      tl.fromTo("#step3-box7", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 100.9);
       tl.fromTo("#stage", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 116);
       tl.fromTo("#stage", {"opacity":1}, {"opacity":0,"duration":0.3,"ease":"power2.in","immediateRender":false}, 139.2);
       tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-175,"y":-31.211,"scale":1.5,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 123.3);
@@ -144,14 +142,10 @@
       tl.fromTo("#camera", {"x":-210,"y":-454.75,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 163.1);
       tl.fromTo("#step5-box1", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 160.7);
       tl.fromTo("#step5-box1", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 162.9);
-      tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":-510,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 173.4);
-      tl.fromTo("#camera", {"x":-210,"y":-510,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 174.5);
-      tl.fromTo("#step5-box2", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 174);
-      tl.fromTo("#step5-box2", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 174.3);
       tl.fromTo("#camera", {"x":0,"y":0,"scale":1}, {"x":-210,"y":-510,"scale":1.6,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 182.1);
       tl.fromTo("#camera", {"x":-210,"y":-510,"scale":1.6}, {"x":0,"y":0,"scale":1,"duration":0.6,"ease":"power2.inOut","immediateRender":false}, 186.9);
-      tl.fromTo("#step5-box3", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 182.7);
-      tl.fromTo("#step5-box3", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 186.7);
+      tl.fromTo("#step5-box2", {"opacity":0}, {"opacity":1,"duration":0.3,"ease":"power2.out","immediateRender":false}, 182.7);
+      tl.fromTo("#step5-box2", {"opacity":1}, {"opacity":0,"duration":0.2,"ease":"power2.in","immediateRender":false}, 186.7);
       window.__timelines["main"] = tl;
     </script>
   </body>

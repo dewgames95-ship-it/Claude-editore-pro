@@ -43,8 +43,8 @@
     tl.fromTo("#p3-b2-old", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.inOut" }, 24.5);
     tl.fromTo("#p3-b3", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 24.5);
     tl.fromTo("#p3-lt0", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.7);
-    tl.fromTo("#p3-lt0", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 3.4);
-    tl.fromTo("#p3-col", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 30.2);
+    tl.fromTo("#p3-lt0", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in", immediateRender: false }, 3.4);
+    tl.fromTo("#p3-col", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in", immediateRender: false }, 30.2);
     window.__timelines = window.__timelines || {};
     window.__timelines["step3-panel"] = tl;
   </script>

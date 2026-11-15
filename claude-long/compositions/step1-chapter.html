@@ -28,7 +28,7 @@
     tl.fromTo("#c1-title", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.3);
     tl.fromTo("#c1-sub", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.6);
     tl.fromTo("#c1-dots", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.5);
-    tl.fromTo("#c1-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in" }, 2.2);
+    tl.fromTo("#c1-wrap", { opacity: 1 }, { opacity: 0, duration: 0.3, ease: "power2.in", immediateRender: false }, 2.2);
     window.__timelines = window.__timelines || {};
     window.__timelines["step1-chapter"] = tl;
   </script>

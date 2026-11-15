@@ -33,9 +33,9 @@ In this video I will show you step by step how to connect your API exchange. So 
 ## 00:16.7 - 00:26.7  Step 1 recap (card)
 
 **On screen**
-- What just happened: undefined
-- What's next: undefined
-- Quick tip: undefined
+- What just happened: You opened the bot, tapped Connect Exchange and picked Binance.
+- What's next: Choose the mode the bot will run in.
+- Quick tip: Binance and BingX are the recommended exchanges. You can connect up to 2 accounts.
 
 ## 00:26.7 - 00:29.2  Step 2 chapter
 
@@ -57,14 +57,14 @@ In this video I will show you step by step how to connect your API exchange. So 
 
 **Spoken**
 
-And here are the different mode and you get this two channel free access. And there are three modes auto -deduct bot deposit and 12-hour free trial. I will select auto -deduct and you can read all the details. And it ask for details like this. The withdraw permission it ask but it cannot withdraw without your approval. So there is no need to worry. We have to process like this. Don't worry I will show you properly.
+And here are the different mode and you get this two channel free access. And there are three modes auto-deduct bot deposit and 12-hour free trial. I will select auto-deduct and you can read all the details. And it ask for details like this. The withdraw permission it ask but it cannot withdraw without your approval. So there is no need to worry. We have to process like this. Don't worry I will show you properly.
 
 ## 01:00.5 - 01:10.5  Step 2 recap (card)
 
 **On screen**
-- What just happened: undefined
-- What's next: undefined
-- Quick tip: undefined
+- What just happened: You selected Auto Deduct: a 20% share of net profit, charged only when you profit.
+- What's next: Create an API key inside the Binance app.
+- Quick tip: Keep at least $5 USDT in your Funding wallet. The profit share is deducted from there.
 
 ## 01:10.5 - 01:13.0  Step 3 chapter
 
@@ -91,9 +91,9 @@ We will open Binance. I will search here API function. Here functions we will cl
 ## 01:43.5 - 01:53.5  Step 3 recap (card)
 
 **On screen**
-- What just happened: undefined
-- What's next: undefined
-- Quick tip: undefined
+- What just happened: You created a system-generated API key called Mybot and confirmed it with 2FA.
+- What's next: Tap Edit, then set the permissions and the trusted IP.
+- Quick tip: The Secret Key is shown in full only once. Finish the setup before you leave this page.
 
 ## 01:53.5 - 01:56.0  Step 4 chapter
 
@@ -120,9 +120,9 @@ So you need to edit the first. You edit first before taking screen shot. Here en
 ## 02:19.5 - 02:29.5  Step 4 recap (card)
 
 **On screen**
-- What just happened: undefined
-- What's next: undefined
-- Quick tip: undefined
+- What just happened: You enabled Reading, Spot & Margin, Futures, Universal Transfer and Withdrawals, locked the key to the bot's IP and saved.
+- What's next: Send the key's QR code to the bot.
+- Quick tip: With the IP restriction on, the key only works from 78.105.158.130.
 
 ## 02:29.5 - 02:32.0  Step 5 chapter
 
@@ -149,9 +149,9 @@ Just click on and here I am doing with scan QR code. So I am sending this. It is
 ## 03:07.7 - 03:17.7  Step 5 recap (card)
 
 **On screen**
-- What just happened: undefined
-- What's next: undefined
-- Quick tip: undefined
+- What just happened: The bot read your QR screenshot and replied “Binance connected” with your Futures balance.
+- What's next: Tap “Whitelist address” in the bot. It is the last required step.
+- Quick tip: If the bot says the key format is wrong, crop the screenshot tight around the QR and send it again.
 
 ## 03:17.7 - 03:21.7  Outro
 
