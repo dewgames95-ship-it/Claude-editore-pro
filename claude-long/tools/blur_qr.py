@@ -44,6 +44,8 @@ def detect_qr(frame):
     return boxes
 
 def detect_fallback(frame):
+    """White blocks with dense modules. kind 'full' (near-square 170-440 px), 'part' (clipped by
+    screen/header edge, w 150-440, h>=30) or 'small' (square 40-150 px, e.g. thumbnails)."""
     g = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     _, wh = cv2.threshold(g, 225, 255, cv2.THRESH_BINARY)
     wh = cv2.morphologyEx(wh, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8))
@@ -51,15 +53,18 @@ def detect_fallback(frame):
     res = []
     for c in cnts:
         x, y, w, h = cv2.boundingRect(c)
-        if not (170 <= w <= 440 and 170 <= h <= 440): continue
-        if not 0.85 <= w / h <= 1.18: continue
+        if w < 40 or h < 30 or w > 440 or h > 440: continue
+        sq = 0.85 <= w / h <= 1.18
+        if 170 <= w and sq: kind = "full"
+        elif 150 <= w and h < w * 0.85: kind = "part"
+        elif w < 150 and sq: kind = "small"
+        else: continue
         roi = g[y:y+h, x:x+w]
         dark = float((roi < 110).mean())
         if not 0.30 <= dark <= 0.65: continue
-        # modules: strong edge density
         e = cv2.Canny(roi, 80, 200)
         if (e > 0).mean() < 0.08: continue
-        res.append([float(x), float(y), float(w), float(h)])
+        res.append([float(x), float(y), float(w), float(h), kind])
     return res
 
 def work(args):
@@ -135,10 +140,15 @@ def main():
     nraw = int(cap.get(cv2.CAP_PROP_FRAME_COUNT)); cap.release()
     n = (nraw + 1) // 2
     det, fbd = {}, {}
-    with Pool(4) as p:
-        for i, q, fb in p.imap_unordered(work, frames_iter(), chunksize=4):
-            if q: det[i] = q
-            if fb: fbd[i] = fb
+    cache = os.path.join(SRC, "qr_cache.json")
+    if os.path.exists(cache) and "--recache" not in sys.argv:
+        d = json.load(open(cache)); det = {int(k): v for k, v in d["det"].items()}; fbd = {int(k): v for k, v in d["fb"].items()}
+    else:
+        with Pool(4) as p:
+            for i, q, fb in p.imap_unordered(work, frames_iter(), chunksize=4):
+                if q: det[i] = q
+                if fb: fbd[i] = fb
+        json.dump({"det": det, "fb": fbd}, open(cache, "w"))
     print("frames", n, "detector hits", len(det), "fallback candidates", len(fbd), flush=True)
     tracks = [fill_track(t, n) for t in link_tracks(det)]
     print("tracks", len(tracks))
@@ -147,12 +157,19 @@ def main():
         for f, b in tr.items(): allb.setdefault(f, []).append(b)
     # fallback: only fill frames the QR detector missed, IoU>0.3 with a box within +-30 frames
     added = 0
+    base = {f: list(v) for f, v in allb.items()}
     for f, cands in sorted(fbd.items()):
         if f in det: continue
+        near = [b for g in range(f-30, f+31) for b in base.get(g, [])]
+        if not near: continue
         for c in cands:
-            ok = any(iou(c, b) > 0.3 for g in range(f-30, f+31) for b in allb.get(g, []))
-            if ok and not any(iou(c, b) > 0.5 for b in allb.get(f, [])):
-                allb.setdefault(f, []).append(c); added += 1
+            kind, cb = c[4], c[:4]
+            if kind == "full": ok = any(iou(cb, b) > 0.3 for b in near)
+            elif kind == "part":  # clipped QR: same horizontal span as a nearby box
+                ok = any(iou([cb[0], 0, cb[2], 1], [b[0], 0, b[2], 1]) > 0.6 for b in near)
+            else: ok = True  # small: only reached when a QR track exists within +-30 frames
+            if ok and not any(iou(cb, b) > 0.5 for b in allb.get(f, [])):
+                allb.setdefault(f, []).append(cb); added += 1
     print("fallback boxes added", added)
     # light second temporal smoothing: fallback additions may leave 1-frame holes; fill again per frame
     out_boxes = []
