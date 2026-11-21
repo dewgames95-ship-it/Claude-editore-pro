@@ -103,3 +103,17 @@ Ya naye repo ke session me bolo: *"dewgames95-ship-it/Claude-editore-pro se setu
 2. Claude desktop app → Claude Code → is folder ko open karo
 3. `bash setup.sh` (Windows par Git Bash me)
 4. `cd video-edit && npm run dev` se live preview
+
+---
+
+## 🎬 Example: "Never Waste a Lead" video (`demo/lead-agents-final.mp4`)
+
+Reference reel se same topic + style me banaya, 1080x1920, 64 sec. Steps jo Claude ne kiye:
+1. Reference ko `public/reference/` me rakha, contact sheets (1 frame/sec) + Whisper transcript se topic aur style samjha
+2. Hinglish script likhi (7 scenes), har scene ki voice Edge TTS (`hi-IN-MadhurNeural`, +12% speed) se → `public/Voice over/*.mp3`
+3. Scene durations voice length se auto (`src/scenes.json`)
+4. `src/LeadVideo.tsx`: dark dotted bg, neon node network, Claude orb center, har agent par camera zoom, chat/call/invoice cards, stamps, 3-word captions with keyword color
+5. SFX (whoosh har scene, pop/click/bass-hit) + ffmpeg se bana ambient music `public/music/bg.mp3`
+6. `npx remotion render LeadVideo out/final.mp4 --scale=1.5`
+
+**Naye user ke liye same cheez:** repo template se copy → session kholo → reference + topic chat me do → bolo *"isi style me, Hinglish TTS voice, SFX, music ke saath final MP4 banao"*.

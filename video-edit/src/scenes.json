@@ -1,0 +1,37 @@
+[
+ {
+  "id": "hook",
+  "caption": "Claude ko in 4 AI agents se connect karo, aur dobara kabhi ek bhi lead waste nahi hogi.",
+  "dur": 6.94
+ },
+ {
+  "id": "whatsapp",
+  "caption": "Pehla hai WhatsApp agent. Jaise hi naya lead aayega, ye turant unhe message karega, aur unki requirement samjhega.",
+  "dur": 9.05
+ },
+ {
+  "id": "calling",
+  "caption": "Doosra hai calling agent. Agar WhatsApp ke baad kisi client se call par baat karni hai, toh calling agent unhe call karke, unke saare questions ke answers dega.",
+  "dur": 11.38
+ },
+ {
+  "id": "email",
+  "caption": "Teesra hai email agent, aur iske saath invoice builder bhi connected hai.",
+  "dur": 5.95
+ },
+ {
+  "id": "invoice",
+  "caption": "Invoice builder khud invoice banayega, GST aur total ke saath, aur email agent use saare clients ko automatically bhej dega.",
+  "dur": 9.46
+ },
+ {
+  "id": "bonus",
+  "caption": "Aur sabse best baat? Ye teeno agents automatically follow-ups bhi bhejte hain. WhatsApp par message, reminder call, aur payment reminder email.",
+  "dur": 11.83
+ },
+ {
+  "id": "cta",
+  "caption": "Toh agar aapko bhi apne business ke liye aise custom AI agents chahiye, toh follow kar lo.",
+  "dur": 6.5
+ }
+]

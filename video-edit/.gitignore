@@ -2,3 +2,7 @@ node_modules/
 out/
 .DS_Store
 whisper.cpp/
+public/reference/*
+!public/reference/.gitkeep
+public/aroll/*
+!public/aroll/.gitkeep
