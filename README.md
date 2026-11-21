@@ -32,3 +32,20 @@ Claude Code se AI video editing (HyperFrames + Remotion skills).
 ✅ Same repo, same skills, same prompts kaam karte hain
 ⚠️ Bade videos (>100MB) Git me nahi jaate, Git LFS ya chhote clips use karo
 ⚠️ Container temporary hai: render ke baad commit + push karo
+
+## Captions (Whisper)
+`cd video-edit && npm run transcribe -- public/aroll/clip.mp4` → `public/captions.json` (word-by-word, Hinglish ke liye `language: "hi"`)
+
+## 1080p render
+`npm run render:1080` (720x1280 ko 1.5x scale = 1080x1920)
+
+## Setup checklist (guide vs repo)
+| Item | Status |
+|---|---|
+| Node.js + npm | ✅ |
+| Remotion project | ✅ `video-edit/` |
+| FFmpeg | ✅ |
+| Whisper (whisper.cpp) | ✅ `npm run transcribe` |
+| reference / aroll / Voice over folders | ✅ `video-edit/public/` |
+| Remotion skills | ✅ `.claude/skills/` |
+| Live preview | ✅ `npm run dev` (local) |
