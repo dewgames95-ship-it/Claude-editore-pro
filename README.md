@@ -1,64 +1,105 @@
 # Claude Editor Pro
 
-Claude Code se AI video editing (HyperFrames + Remotion skills).
+Claude Code se AI video editing. Reference video do, apni voice/aroll do (ya AI voice), Claude edit karke final MP4 dega.
 
-## Folder structure
-| Folder | Kya hai |
+---
+
+## ⚡ Quick start (har naye session me)
+
+| Situation | Kya karna hai |
 |---|---|
-| `video-edit/` | Remotion project (video jaisa setup) |
-| `video-edit/public/reference/` | Reference videos |
-| `video-edit/public/aroll/` | Talking-head shots |
-| `video-edit/public/Voice over/` | Voice-over audio |
-| `video-edit/src/` | Compositions (720x1280 @ 30fps) |
-| `claude-edit-prompts.md` | 4-step prompt sheet |
-| `claude-intro/`, `claude-long/`, `claude-short/` | HyperFrames tutorial videos |
-| `.claude/skills/` | Remotion skills |
+| Wahi purana session, kuch ghante baad | Kuch nahi, seedha kaam bolo |
+| Wahi session, 2+ din baad / `/clear` ke baad / naya session | Claude ko bolo: **"bash setup.sh chalao"** (~10 sec - 2 min) |
+| Environment me auto setup script save hai | Kuch nahi, session start par khud chalta hai |
 
-## Setup (local)
-1. Node.js 20+, FFmpeg, Git install karo
-2. `npm i -g @anthropic-ai/claude-code`
-3. Repo clone karo, `cd video-edit && npm install`, phir `claude` chalao
-4. Preview: `npm run dev`, Render: `npm run render`
-5. `/model` se model choose karo, permissions allow karo
-6. Claude ko bolo: "check setup and install required tools"
+Phir bas:
+1. Chat me **reference video** + **apni voice / aroll** attach karo (GitHub push zaroori nahi)
+2. Bolo: *"Purane reference/aroll delete karo, ye naye daalo, isi style me mera video [topic] par banao"*
+3. Claude: analyse → script → voice → animation → SFX → captions → `out/final.mp4` deta hai
 
-## Workflow
-1. Reference videos `public/reference/` me, talking shots `public/aroll/` me, audio `public/Voice over/` me
-2. Claude ko bolo: "reference folder check karo, same style me edit karo, 30fps"
-3. Claude cut detection + style notes banata hai, phir scene-by-scene Remotion me animate
-4. `npm run render` se `out/final.mp4` (cloud me `npm run render:cloud`)
+---
 
-## Cloud (claude.ai/code) notes
-✅ Same repo, same skills, same prompts kaam karte hain
-⚠️ Bade videos (>100MB) Git me nahi jaate, Git LFS ya chhote clips use karo
-⚠️ Container temporary hai: render ke baad commit + push karo
+## 📁 Folder structure
 
-## Captions (Whisper)
-`cd video-edit && npm run transcribe -- public/aroll/clip.mp4` → `public/captions.json` (word-by-word, Hinglish ke liye `language: "hi"`)
+```
+Claude-editore-pro/
+├── setup.sh                 # Ek command setup
+├── tools/
+│   ├── voice.sh             # Free AI voice-over (Edge TTS)
+│   ├── image.sh             # Free AI images (Pollinations)
+│   └── sfx.sh               # SFX generate (ffmpeg)
+├── video-edit/              # Remotion project (reels, 720x1280 @ 30fps)
+│   ├── public/reference/    # Reference videos
+│   ├── public/aroll/        # Aapke talking-head shots
+│   ├── public/Voice over/   # Voice-over audio
+│   ├── public/sfx/          # whoosh, pop, click, riser, bass-hit
+│   ├── src/                 # Compositions (Claude likhta hai)
+│   ├── transcribe.mjs       # Whisper captions
+│   └── out/                 # Final renders (git me nahi jata)
+├── claude-intro/ claude-long/ claude-short/   # HyperFrames tutorial videos (4:3)
+├── claude-edit-prompts.md   # 4-step prompt sheet
+├── demo/                    # Demo video + voice sample
+└── .claude/skills/          # Remotion + tutorial-video skills
+```
 
-## 1080p render
-`npm run render:1080` (720x1280 ko 1.5x scale = 1080x1920)
+---
 
-## Setup checklist (guide vs repo)
-| Item | Status |
-|---|---|
-| Node.js + npm | ✅ |
-| Remotion project | ✅ `video-edit/` |
-| FFmpeg | ✅ |
-| Whisper (whisper.cpp) | ✅ `npm run transcribe` |
-| reference / aroll / Voice over folders | ✅ `video-edit/public/` |
-| Remotion skills | ✅ `.claude/skills/` |
-| Live preview | ✅ `npm run dev` (local) |
+## 🧰 Tools (sab free, koi API key nahi)
 
-## Naya session (cloud) me
-1. Repo select karke session kholo
-2. `bash setup.sh` (voice, Remotion deps, Whisper sab install)
-3. Purane reference/aroll delete karo, naye daalo, edit shuru
-
-## Free tools
 | Kaam | Tool | Command |
 |---|---|---|
-| Voice-over | Edge TTS (free, Hindi/Hinglish) | `bash tools/voice.sh script.txt "video-edit/public/Voice over/vo.mp3"` |
-| AI images | Pollinations (free, no key) | `bash tools/image.sh "prompt" video-edit/public/images/1.jpg` |
-| SFX | ffmpeg generated | `bash tools/sfx.sh` |
-| Captions | Whisper | `cd video-edit && npm run transcribe -- <video>` |
+| Voice-over | Edge TTS 7.x | `bash tools/voice.sh script.txt "video-edit/public/Voice over/vo.mp3" hi-IN-MadhurNeural` |
+| AI images | Pollinations | `bash tools/image.sh "prompt" video-edit/public/images/1.jpg` |
+| SFX | ffmpeg | `bash tools/sfx.sh` |
+| Captions | Whisper.cpp (medium, Hinglish) | `cd video-edit && npm run transcribe -- public/aroll/clip.mp4` |
+| Preview | Remotion Studio | `cd video-edit && npm run dev` (local PC) |
+| Render 720p | Remotion 4.0.545 | `cd video-edit && npm run render` |
+| Render 1080p | Remotion | `cd video-edit && npm run render:1080` |
+| Tutorial videos | HyperFrames 0.9.77 | `cd claude-long && npm run render` |
+
+Voices: `hi-IN-MadhurNeural` (male), `hi-IN-SwaraNeural` (female), `en-IN-PrabhatNeural`, `en-IN-NeerjaNeural`
+
+---
+
+## ⚙️ Setup details
+
+`bash setup.sh` ye karta hai:
+1. edge-tts install/update
+2. Cloud proxy certificate fix (sirf cloud me)
+3. `video-edit` me `npm install`
+4. SFX generate
+
+Whisper model (1.5GB) pehli baar `npm run transcribe` par khud download hota hai. Pehle se chahiye toh: `bash setup.sh --whisper`
+
+Cloud me render ke liye pre-installed Chromium auto-detect hota hai (`remotion.config.ts`). Local PC par Remotion apna browser download karta hai.
+
+---
+
+## 📤 Files kaise doon
+
+| Tarika | Kab use karo |
+|---|---|
+| Chat me attach | Chhoti files (reference clips, voice). Claude khud sahi folder me daalta hai |
+| GitHub push | Badi files (100MB tak per file). `video-edit/public/...` me |
+| Google Drive link (public) | Bahut badi files |
+
+⚠️ Cloud container 1-2 din me reset hota hai. Final video chahiye toh session me hi download kar lo, ya Claude ko bolo `demo/` ya `renders/` me push kare.
+
+---
+
+## 🆕 Naye repo me same setup
+
+1. Is repo ko GitHub par **Template** bana do (Settings → General → Template repository ✅)
+2. Naya repo: **Use this template** → naam do → create
+3. Naye repo ke saath session kholo → "bash setup.sh chalao"
+
+Ya naye repo ke session me bolo: *"dewgames95-ship-it/Claude-editore-pro se setup copy karo"*
+
+---
+
+## 💻 Local PC (Mac/Windows) par
+
+1. Node.js 22+, FFmpeg, Python 3, Git install karo
+2. Claude desktop app → Claude Code → is folder ko open karo
+3. `bash setup.sh` (Windows par Git Bash me)
+4. `cd video-edit && npm run dev` se live preview

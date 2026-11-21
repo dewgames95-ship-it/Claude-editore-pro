@@ -6,23 +6,22 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "render": "remotion render MyVideo out/final.mp4",
-    "render:cloud": "remotion render MyVideo out/final.mp4 --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell",
     "transcribe": "node transcribe.mjs",
     "render:1080": "remotion render MyVideo out/final-1080.mp4 --scale=1.5",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc"
   },
   "dependencies": {
-    "@remotion/captions": "^4.0.543",
-    "@remotion/cli": "4.0.543",
-    "@remotion/install-whisper-cpp": "^4.0.543",
-    "@remotion/media": "4.0.543",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "remotion": "4.0.543"
+    "@remotion/captions": "^4.0.545",
+    "@remotion/cli": "4.0.545",
+    "@remotion/install-whisper-cpp": "^4.0.545",
+    "@remotion/media": "4.0.545",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.545"
   },
   "devDependencies": {
-    "@remotion/eslint-config-flat": "4.0.543",
+    "@remotion/eslint-config-flat": "4.0.545",
     "@types/react": "19.2.0",
     "eslint": "9.19.0",
     "typescript": "5.9.3"

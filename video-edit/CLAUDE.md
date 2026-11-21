@@ -11,4 +11,7 @@
 - Default: vertical 720x1280, 30fps
 - Pehle reference videos ka cut detection + contact sheets banao, style notes likho, phir scene-by-scene animate karo
 - Assets `staticFile()` se load karo
+- Cloud me render ke liye kuch extra nahi chahiye (config me Chromium auto-detect)
+- Voice: `bash ../tools/voice.sh`, Images: `bash ../tools/image.sh`, SFX: `public/sfx/`
+- Captions: `npm run transcribe -- <video>`
 - Remotion skills use karo (`.claude/skills/`)
