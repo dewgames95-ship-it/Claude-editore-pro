@@ -1,0 +1,47 @@
+[
+ {
+  "id": "hook",
+  "caption": "Bina kisi editing software ke, Claude se aise motion graphics videos banao. Poora setup, start se end tak.",
+  "dur": 9.22
+ },
+ {
+  "id": "repo",
+  "caption": "Step one. GitHub par ek repo banao, aur use Claude Code mein connect karo. Phir bas bolo, setup chalao.",
+  "dur": 9.82
+ },
+ {
+  "id": "tools",
+  "caption": "Setup khud sab install karta hai. Remotion animation ke liye, Whisper captions ke liye, free AI voice, aur SFX.",
+  "dur": 9.67
+ },
+ {
+  "id": "folders",
+  "caption": "Step two. Reference video, apni A-roll, aur voice over, inko apne-apne folders mein daalo.",
+  "dur": 8.02
+ },
+ {
+  "id": "analyse",
+  "caption": "Step three. Claude reference ko frame by frame analyse karta hai, aur uska style aur topic samajhta hai.",
+  "dur": 8.04
+ },
+ {
+  "id": "build",
+  "caption": "Phir woh script likhta hai, AI voice banata hai, aur Remotion mein har scene animate karta hai.",
+  "dur": 6.38
+ },
+ {
+  "id": "render",
+  "caption": "Last mein SFX aur music ke saath, 1080p mein final render. Sirf baarah minute mein.",
+  "dur": 7.44
+ },
+ {
+  "id": "bonus",
+  "caption": "Aur sabse best baat? Ye cloud mein bhi chalta hai, aur naye session mein setup apne aap ho jata hai.",
+  "dur": 7.61
+ },
+ {
+  "id": "cta",
+  "caption": "Aise hi AI video editing seekhni hai, toh follow kar lo.",
+  "dur": 4.63
+ }
+]
