@@ -49,3 +49,16 @@ Claude Code se AI video editing (HyperFrames + Remotion skills).
 | reference / aroll / Voice over folders | ✅ `video-edit/public/` |
 | Remotion skills | ✅ `.claude/skills/` |
 | Live preview | ✅ `npm run dev` (local) |
+
+## Naya session (cloud) me
+1. Repo select karke session kholo
+2. `bash setup.sh` (voice, Remotion deps, Whisper sab install)
+3. Purane reference/aroll delete karo, naye daalo, edit shuru
+
+## Free tools
+| Kaam | Tool | Command |
+|---|---|---|
+| Voice-over | Edge TTS (free, Hindi/Hinglish) | `bash tools/voice.sh script.txt "video-edit/public/Voice over/vo.mp3"` |
+| AI images | Pollinations (free, no key) | `bash tools/image.sh "prompt" video-edit/public/images/1.jpg` |
+| SFX | ffmpeg generated | `bash tools/sfx.sh` |
+| Captions | Whisper | `cd video-edit && npm run transcribe -- <video>` |
