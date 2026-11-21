@@ -1,0 +1,42 @@
+[
+ {
+  "id": "hook",
+  "caption": "Bina kisi editing software ke, sirf Claude Code se aise videos banao. Chalo, 5 aasaan steps mein poora setup dekhte hain.",
+  "dur": 8.18
+ },
+ {
+  "id": "s1",
+  "caption": "Step one. GitHub par ek naya repo banao, aur Claude Code app mein us repo ko select karo.",
+  "dur": 5.9
+ },
+ {
+  "id": "s2",
+  "caption": "Step two. Chat mein bas likho, setup chalao. Claude khud Remotion, Whisper, free AI voice aur SFX install kar dega.",
+  "dur": 8.35
+ },
+ {
+  "id": "s3",
+  "caption": "Step three. Plus button se apni reference video attach karo, aur batao kis topic par video chahiye.",
+  "dur": 6.31
+ },
+ {
+  "id": "s4",
+  "caption": "Step four. Claude reference ko frame by frame dekhkar style samjhega, script likhega, voice banayega, aur har scene animate karega.",
+  "dur": 8.21
+ },
+ {
+  "id": "s5",
+  "caption": "Step five. SFX aur music ke saath final video render hokar, seedha chat mein aa jayegi. Sirf 10 se 12 minute mein.",
+  "dur": 8.16
+ },
+ {
+  "id": "bonus",
+  "caption": "Aur best part? Agli baar naya session kholo, setup apne aap ho jata hai.",
+  "dur": 4.75
+ },
+ {
+  "id": "cta",
+  "caption": "Aise aur AI tutorials ke liye, follow kar lo.",
+  "dur": 3.19
+ }
+]
