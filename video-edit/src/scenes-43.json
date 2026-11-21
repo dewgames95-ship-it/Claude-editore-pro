@@ -1,0 +1,47 @@
+[
+ {
+  "id": "hook",
+  "caption": "Claude se bina editing software ke aise videos banao. Poora setup, start se end tak.",
+  "dur": 5.57
+ },
+ {
+  "id": "repo",
+  "caption": "Step one. GitHub repo banao, Claude Code mein connect karo, aur bolo, setup chalao.",
+  "dur": 5.59
+ },
+ {
+  "id": "tools",
+  "caption": "Setup khud install karta hai: Remotion, Whisper captions, free AI voice, aur SFX.",
+  "dur": 6.0
+ },
+ {
+  "id": "folders",
+  "caption": "Step two. Reference video, A-roll aur voice over, apne folders mein daalo.",
+  "dur": 4.97
+ },
+ {
+  "id": "analyse",
+  "caption": "Step three. Claude reference ko frame by frame analyse karke, style aur topic samajhta hai.",
+  "dur": 5.42
+ },
+ {
+  "id": "build",
+  "caption": "Phir script, AI voice, aur har scene ka animation, sab khud banata hai.",
+  "dur": 4.75
+ },
+ {
+  "id": "render",
+  "caption": "Aur SFX, music ke saath, 1080p final render, sirf baarah minute mein.",
+  "dur": 5.33
+ },
+ {
+  "id": "bonus",
+  "caption": "Best part? Ye cloud mein bhi chalta hai, aur har naye session mein setup apne aap.",
+  "dur": 4.68
+ },
+ {
+  "id": "cta",
+  "caption": "AI video editing seekhni hai? Toh follow kar lo.",
+  "dur": 3.19
+ }
+]
