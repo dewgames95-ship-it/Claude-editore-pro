@@ -5,28 +5,28 @@ Claude Code se AI video editing (HyperFrames + Remotion skills).
 ## Folder structure
 | Folder | Kya hai |
 |---|---|
-| `claude-edit/` | Reference-video wala edit workflow |
-| `claude-edit/reference/` | Reference video (jis style me edit chahiye) |
-| `claude-edit/input/` | Apni raw video |
-| `claude-edit/prompts/prompt-sheet.md` | 4-step prompts |
-| `claude-edit/out/` | Final render |
-| `claude-intro/` | Intro video (rendered) |
-| `claude-long/` | Long tutorial (rendered) |
-| `claude-short/` | Short video (setup only) |
-| `.claude/skills/` | Remotion / tutorial-video skills |
+| `video-edit/` | Remotion project (video jaisa setup) |
+| `video-edit/public/reference/` | Reference videos |
+| `video-edit/public/aroll/` | Talking-head shots |
+| `video-edit/public/Voice over/` | Voice-over audio |
+| `video-edit/src/` | Compositions (720x1280 @ 30fps) |
+| `claude-edit-prompts.md` | 4-step prompt sheet |
+| `claude-intro/`, `claude-long/`, `claude-short/` | HyperFrames tutorial videos |
+| `.claude/skills/` | Remotion skills |
 
 ## Setup (local)
 1. Node.js 20+, FFmpeg, Git install karo
 2. `npm i -g @anthropic-ai/claude-code`
-3. Repo clone karo, folder me `claude` chalao
-4. `/model` se model choose karo, permissions allow karo
-5. Claude ko bolo: "check setup and install required tools"
+3. Repo clone karo, `cd video-edit && npm install`, phir `claude` chalao
+4. Preview: `npm run dev`, Render: `npm run render`
+5. `/model` se model choose karo, permissions allow karo
+6. Claude ko bolo: "check setup and install required tools"
 
 ## Workflow
-1. Reference video `claude-edit/reference/` me daalo
-2. `prompts/prompt-sheet.md` ke Step 2 se reference analyse karwao
-3. Step 3 se apne video ke liye custom prompt banwao
-4. Step 4: Claude Code render karega `claude-edit/out/` me
+1. Reference videos `public/reference/` me, talking shots `public/aroll/` me, audio `public/Voice over/` me
+2. Claude ko bolo: "reference folder check karo, same style me edit karo, 30fps"
+3. Claude cut detection + style notes banata hai, phir scene-by-scene Remotion me animate
+4. `npm run render` se `out/final.mp4`
 
 ## Cloud (claude.ai/code) notes
 ✅ Same repo, same skills, same prompts kaam karte hain
