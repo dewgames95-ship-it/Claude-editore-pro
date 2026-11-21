@@ -26,7 +26,7 @@ Claude Code se AI video editing (HyperFrames + Remotion skills).
 1. Reference videos `public/reference/` me, talking shots `public/aroll/` me, audio `public/Voice over/` me
 2. Claude ko bolo: "reference folder check karo, same style me edit karo, 30fps"
 3. Claude cut detection + style notes banata hai, phir scene-by-scene Remotion me animate
-4. `npm run render` se `out/final.mp4`
+4. `npm run render` se `out/final.mp4` (cloud me `npm run render:cloud`)
 
 ## Cloud (claude.ai/code) notes
 ✅ Same repo, same skills, same prompts kaam karte hain
