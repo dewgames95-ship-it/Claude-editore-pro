@@ -6,3 +6,4 @@ public/reference/*
 !public/reference/.gitkeep
 public/aroll/*
 !public/aroll/.gitkeep
+public/presenter/

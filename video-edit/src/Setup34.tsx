@@ -125,7 +125,7 @@ type Msg =
   | { t: "file"; text: string; at: number }
   | { t: "video"; text: string; at: number };
 
-const Phone: React.FC<{
+export const Phone: React.FC<{
   title?: string;
   sub?: string;
   msgs?: Msg[];

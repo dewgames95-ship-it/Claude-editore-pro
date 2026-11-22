@@ -4,6 +4,8 @@ Claude Code se AI video editing. Reference video do, apni voice/aroll do (ya AI 
 
 ---
 
+> 📘 Poora process: **[SETUP.md](SETUP.md)**. Naye session me bas bolo "setup complete karo".
+
 ## ⚡ Quick start (har naye session me)
 
 | Situation | Kya karna hai |

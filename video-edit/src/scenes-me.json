@@ -1,0 +1,47 @@
+[
+ {
+  "id": "hook",
+  "caption": "Premiere Pro nahi, After Effects nahi. Sirf Claude Code se aisi professional videos. Aaj main aapko poora setup, step by step dikhata hoon.",
+  "dur": 9.48
+ },
+ {
+  "id": "how",
+  "caption": "Pehle samjho ye kaam kaise karta hai. Claude Code ek AI hai jo code likhta hai, aur Remotion naam ka tool us code ko video mein badal deta hai.",
+  "dur": 9.17
+ },
+ {
+  "id": "s1",
+  "caption": "Step one. GitHub par ek naya repo banao. Phir Claude Code app kholo, aur new session mein apna repo select karo.",
+  "dur": 7.44
+ },
+ {
+  "id": "s2",
+  "caption": "Step two. Chat mein likho, setup chalao. Claude khud chaar tools install karega. Remotion animation ke liye, Whisper captions ke liye, free AI voice, aur sound effects.",
+  "dur": 11.21
+ },
+ {
+  "id": "s3",
+  "caption": "Step three. Plus button dabao, apni reference video attach karo, aur likho, isi style mein is topic par video banao.",
+  "dur": 7.66
+ },
+ {
+  "id": "s4",
+  "caption": "Step four. Ab Claude reference ko frame by frame dekhta hai. Style samajhta hai, script likhta hai, voice banata hai, aur har scene animate karta hai.",
+  "dur": 9.43
+ },
+ {
+  "id": "s5",
+  "caption": "Step five. Kuch hi minute mein final video, voice, SFX aur music ke saath, seedha chat mein aa jaati hai. Download karo, aur post karo.",
+  "dur": 9.46
+ },
+ {
+  "id": "tip",
+  "caption": "Ek pro tip. Har naye session mein setup apne aap ho jaata hai, toh baar baar install ki tension nahi.",
+  "dur": 6.43
+ },
+ {
+  "id": "cta",
+  "caption": "Aise hi AI tools seekhne ke liye, follow karo. Milte hain agle video mein.",
+  "dur": 5.14
+ }
+]
